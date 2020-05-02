@@ -10,7 +10,7 @@
 
 ## 光立方传输协议
 
-<img src=".\res\coor.jpg" style="zoom:67%;" />
+<img src=".\res\coor.jpg" style="zoom:10" />
 
 坐标系选取如上图所示，其中坐标原点对应图中“亮灯点”，在“上位机开关”按键正上方。任意一个led的位置可由一个三元组表示：`(x,y,z)`，其中x,y,z取值均为0~7。
 
