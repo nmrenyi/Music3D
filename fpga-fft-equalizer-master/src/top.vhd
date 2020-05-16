@@ -87,8 +87,17 @@ architecture top_impl of top is
 	signal start_delay:                             std_logic;
 	signal iCLK_50:          std_logic:='0'; 
 	signal level: std_logic_vector(7 downto 0) := (others => '0');
+	signal out_page_tmp: std_logic_vector(63 downto 0) := (others => '0');
+	
+	-- the below two signals are prepared for sending data to light cube
 	signal out_page: std_logic_vector(63 downto 0) := (others => '0');
-	signal iCLK_10Hz: std_logic:='0';
+	signal out_page_sample_available: std_logic:='0';       
+
+	type fsm is(idle, counting, available);
+    signal state: fsm:=idle;
+    constant counting_limit : integer := 10000000 - 1;
+	signal count_value : integer := counting_limit;
+	
 begin
 	c0: fdiv generic map ( N => 2) port map(clkin=>iCLK_100, clkout=>iCLK_50);
 	c1: compress port map(in_value => std_logic_vector(tmp_left_channel_sample_from_adc_signal(bits_per_sample - 1 - 4 downto bits_per_sample - 16)), out_value => level);
@@ -101,9 +110,9 @@ begin
 		in2 => level,
 		in1 => level,
 		in0 => level,
-		out_page => out_page
+		out_page => out_page_tmp
 	);
-	c3: fdiv generic map ( N => 10000000) port map(clkin=>iCLK_100, clkout=>iCLK_10Hz);
+
 
 
 	-- reset_n_signal <= iKEY(0);  -- reset signal should be '1' to work normally, original code
@@ -128,6 +137,32 @@ begin
 	-- and size of mask is fixed to 7, however, the fft size is default 2**4=16, which can change!
 
 
+	-- send signal every 0.1s
+    process(iCLK_100) begin
+        if (rising_edge(iCLK_100)) then
+            case state is
+                when idle => 
+                    count_value <= counting_limit;
+                    state <= counting;
+                    out_page_sample_available <= '0';
+                when counting =>
+                    if (count_value < counting_limit) then
+                        out_page_sample_available <= '0';
+                    end if;
+                    if (count_value > 1) then
+                        count_value <= count_value - 1;
+                    else
+                        out_page <= out_page_tmp;
+                        state <= available;
+                    end if;
+                when available =>
+                    out_page_sample_available <= '1';
+                    count_value <= counting_limit;
+                    state <= counting;
+            end case;
+        end if;
+	end process;
+	
 	process(iCLK_50)
 		variable cnt: integer := 10;
 		variable lim: integer := 50000000;
