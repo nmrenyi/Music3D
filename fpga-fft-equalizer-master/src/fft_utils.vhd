@@ -56,9 +56,9 @@ package body fft_utils is
 		if twiddle_num = 0 then
 			out_re := in_re;  
 			out_im := in_im;  
-		elsif twiddle_num * 2**(8 - fft_size_exp) = 64 then
-			out_re := - in_im;  
-			out_im :=   in_re;
+		-- elsif twiddle_num * 2**(8 - fft_size_exp) = 64 then
+		-- 	out_re := - in_im;  
+		-- 	out_im :=   in_re;
 		else
 			multed1 := in_re * tw_re;
 			multed2 := in_im * tw_im;

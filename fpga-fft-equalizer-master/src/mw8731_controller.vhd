@@ -17,6 +17,11 @@ entity mw8731_controller is
 		right_channel_sample_from_adc: out signed(bits_per_sample - 1 downto 0) := (others => '0');
 		sample_available_from_adc:     out std_logic                            := '0';
 		
+		
+		tmp_left_channel_sample_from_adc:  out signed(bits_per_sample - 1 downto 0) := (others => '0');
+		tmp_right_channel_sample_from_adc: out signed(bits_per_sample - 1 downto 0) := (others => '0');
+
+
 		-- left_channel_sample_to_dac:    in  signed(bits_per_sample - 1 downto 0);
 		-- right_channel_sample_to_dac:   in  signed(bits_per_sample - 1 downto 0);
 		-- sample_available_to_dac:       in  std_logic;
@@ -48,6 +53,15 @@ architecture wm8731_controller_impl of mw8731_controller is
 
 	signal i2c_transmission_start:   std_logic                    := '0';
 	signal i2c_transmission_ongoing: std_logic                    := '0';
+	signal tmp_left : signed(bits_per_sample - 1 downto 0) := (others => '0');
+	signal tmp_right : signed(bits_per_sample - 1 downto 0) := (others => '0');
+	component bit_not
+		generic (vector_length : integer);
+		port(
+			in_sig: in signed(vector_length - 1 downto 0);
+			out_sig: out signed(vector_length - 1 downto 0)
+		);
+	end component;
 
 begin	
 
@@ -56,6 +70,11 @@ begin
 	-- 	inclk0 => clk_50MHz,
 	-- 	c0 => 	  mclk_18MHz	
 	-- );
+	left_channel_sample_from_adc <= tmp_left;
+	right_channel_sample_from_adc <= tmp_right;
+
+	uut1: bit_not generic map(vector_length => bits_per_sample) port map(in_sig => tmp_left, out_sig => tmp_left_channel_sample_from_adc);
+	uut2: bit_not generic map(vector_length => bits_per_sample) port map(in_sig => tmp_right, out_sig => tmp_right_channel_sample_from_adc);
 
 	I2C_CLK_PRESCALER_INSTANCE: entity work.i2c_clk_prescaler 
 	port map (
@@ -86,8 +105,8 @@ begin
 	port map (
 		reset_n => reset_n,
 		
-		left_channel_sample_from_adc => left_channel_sample_from_adc,
-		right_channel_sample_from_adc => right_channel_sample_from_adc,
+		left_channel_sample_from_adc => tmp_left,
+		right_channel_sample_from_adc => tmp_right,
 		sample_available_from_adc => sample_available_from_adc,
 		
 		bclk => bclk,
@@ -232,3 +251,29 @@ begin
 	end process;
 
 end wm8731_controller_impl;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity bit_not is 
+    generic(
+        vector_length: integer := 4
+    );
+    port(
+        in_sig: in signed(vector_length - 1 downto 0) := (others => '0');
+        out_sig: out signed(vector_length - 1 downto 0) := (others => '0')
+    );
+end bit_not;
+
+architecture bit_not_impl of bit_not is 
+    begin
+        process(in_sig) begin
+		  if (in_sig(in_sig'length - 1) = '1') then
+			out_sig <= (not in_sig) + 1;
+			else
+			out_sig <= in_sig;
+			end if;
+			end process;
+end bit_not_impl;

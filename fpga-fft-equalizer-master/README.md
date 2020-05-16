@@ -71,3 +71,9 @@ BOSR=1
 2. Are the FFT windows independent(i.e. without overlap)
 3. How can I use the FFT result?
 4. I^S mode? sample freq? How many bits?
+
+
+# RY ASK
+接3.3V/5V？接一个两个？
+测试test文件
+如何看architecture中间的输出
