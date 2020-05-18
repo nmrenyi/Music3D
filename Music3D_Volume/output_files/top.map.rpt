@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Mon May 18 16:29:57 2020
+Mon May 18 19:32:21 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -29,86 +29,87 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  21. Parameter Settings for User Entity Instance: Top-level Entity: |top
  22. Parameter Settings for User Entity Instance: AN831:AN831
  23. Parameter Settings for User Entity Instance: AN831:AN831|mypll:c0|altpll:altpll_component
- 24. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR
- 25. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|mask_freq:uut1
- 26. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|mask_freq:uut2
- 27. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_input_deserializer:FFT_INPUT_FORMER1
- 28. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT
- 29. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1
- 30. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1
- 31. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
- 32. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
- 33. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
- 34. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
- 35. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
- 36. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
- 37. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0
- 38. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
- 39. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
- 40. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
- 41. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
- 42. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
- 43. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
- 44. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0
- 45. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1
- 46. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
- 47. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
- 48. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
- 49. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
- 50. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
- 51. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
- 52. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0
- 53. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
- 54. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
- 55. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
- 56. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
- 57. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
- 58. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
- 59. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT
- 60. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1
- 61. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1
- 62. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
- 63. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
- 64. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
- 65. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
- 66. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
- 67. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
- 68. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0
- 69. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
- 70. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
- 71. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
- 72. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
- 73. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
- 74. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
- 75. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0
- 76. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1
- 77. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
- 78. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
- 79. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
- 80. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
- 81. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
- 82. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
- 83. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0
- 84. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
- 85. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
- 86. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
- 87. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
- 88. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
- 89. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
- 90. Parameter Settings for User Entity Instance: AN831:AN831|mw8731_controller:MW8731_CONTROLLER1
- 91. Parameter Settings for User Entity Instance: AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|bit_not:uut1
- 92. Parameter Settings for User Entity Instance: AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|bit_not:uut2
- 93. Parameter Settings for User Entity Instance: AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|dsp_slave_reader:DSP_SLAVE_READER_INSTANCE
- 94. altpll Parameter Settings by Entity Instance
- 95. Port Connectivity Checks: "AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|i2c_master_writer:I2C_MASTER_WRITER_INSTANCE"
- 96. Port Connectivity Checks: "AN831:AN831|mw8731_controller:MW8731_CONTROLLER1"
- 97. Port Connectivity Checks: "AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT"
- 98. Port Connectivity Checks: "AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT"
- 99. Port Connectivity Checks: "AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_input_deserializer:FFT_INPUT_FORMER1"
-100. Port Connectivity Checks: "AN831:AN831|audio_processor:AUDIO_PROCESSOR"
-101. Port Connectivity Checks: "AN831:AN831|mypll:c0"
-102. Elapsed Time Per Partition
-103. Analysis & Synthesis Messages
+ 24. Parameter Settings for User Entity Instance: AN831:AN831|compress:c1
+ 25. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR
+ 26. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|mask_freq:uut1
+ 27. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|mask_freq:uut2
+ 28. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_input_deserializer:FFT_INPUT_FORMER1
+ 29. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT
+ 30. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1
+ 31. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 32. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 33. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 34. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 35. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 36. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 37. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 38. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 39. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 40. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 41. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 42. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 43. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 44. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 45. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0
+ 46. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 47. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 48. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 49. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 50. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 51. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 52. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 53. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 54. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 55. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 56. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 57. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 58. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 59. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 60. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT
+ 61. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1
+ 62. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 63. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 64. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 65. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 66. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 67. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 68. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 69. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 70. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 71. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 72. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 73. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 74. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 75. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 76. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0
+ 77. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 78. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 79. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 80. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 81. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 82. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 83. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 84. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 85. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 86. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft1
+ 87. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1|fft_dif:\general:fft0
+ 88. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 89. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft1
+ 90. Parameter Settings for User Entity Instance: AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0|fft_dif:\general:fft0
+ 91. Parameter Settings for User Entity Instance: AN831:AN831|mw8731_controller:MW8731_CONTROLLER1
+ 92. Parameter Settings for User Entity Instance: AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|bit_not:uut1
+ 93. Parameter Settings for User Entity Instance: AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|bit_not:uut2
+ 94. Parameter Settings for User Entity Instance: AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|dsp_slave_reader:DSP_SLAVE_READER_INSTANCE
+ 95. altpll Parameter Settings by Entity Instance
+ 96. Port Connectivity Checks: "AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|i2c_master_writer:I2C_MASTER_WRITER_INSTANCE"
+ 97. Port Connectivity Checks: "AN831:AN831|mw8731_controller:MW8731_CONTROLLER1"
+ 98. Port Connectivity Checks: "AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_RIGHT"
+ 99. Port Connectivity Checks: "AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_dif:FFT_LEFT"
+100. Port Connectivity Checks: "AN831:AN831|audio_processor:AUDIO_PROCESSOR|fft_input_deserializer:FFT_INPUT_FORMER1"
+101. Port Connectivity Checks: "AN831:AN831|audio_processor:AUDIO_PROCESSOR"
+102. Port Connectivity Checks: "AN831:AN831|mypll:c0"
+103. Elapsed Time Per Partition
+104. Analysis & Synthesis Messages
 
 
 
@@ -134,13 +135,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 18 16:29:57 2020           ;
+; Analysis & Synthesis Status        ; Successful - Mon May 18 19:32:21 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top                                             ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 714                                             ;
-;     Total combinational functions  ; 569                                             ;
+; Total logic elements               ; 712                                             ;
+;     Total combinational functions  ; 567                                             ;
 ;     Dedicated logic registers      ; 422                                             ;
 ; Total registers                    ; 422                                             ;
 ; Total pins                         ; 8                                               ;
@@ -253,32 +254,32 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
-+----------------------------------+-----------------+-----------------------------+-----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                                  ; Library ;
-+----------------------------------+-----------------+-----------------------------+-----------------------------------------------------------------------------------------------+---------+
-; trans_pkg.vhd                    ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/trans_pkg.vhd              ;         ;
-; top.vhd                          ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/top.vhd                    ;         ;
-; mypll.vhd                        ; yes             ; User Wizard-Generated File  ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/mypll.vhd                  ;         ;
-; mw8731_controller.vhd            ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/mw8731_controller.vhd      ;         ;
-; mTXD.vhd                         ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/mTXD.vhd                   ;         ;
-; mTransmitter.vhd                 ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/mTransmitter.vhd           ;         ;
-; i2c_master_writer.vhd            ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/i2c_master_writer.vhd      ;         ;
-; i2c_clk_prescaler.vhd            ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/i2c_clk_prescaler.vhd      ;         ;
-; fft_utils.vhd                    ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/fft_utils.vhd              ;         ;
-; fft_twiddle_factors_64.vhd       ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/fft_twiddle_factors_64.vhd ;         ;
-; fft_input_deserializer.vhd       ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/fft_input_deserializer.vhd ;         ;
-; fft_dif.vhd                      ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/fft_dif.vhd                ;         ;
-; dsp_slave_reader.vhd             ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/dsp_slave_reader.vhd       ;         ;
-; audio_processor.vhd              ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/audio_processor.vhd        ;         ;
-; AN831.vhd                        ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/AN831.vhd                  ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                         ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                     ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                    ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                  ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                  ;         ;
-+----------------------------------+-----------------+-----------------------------+-----------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+-----------------------------+------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                                         ; Library ;
++----------------------------------+-----------------+-----------------------------+------------------------------------------------------------------------------------------------------+---------+
+; trans_pkg.vhd                    ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/trans_pkg.vhd              ;         ;
+; top.vhd                          ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/top.vhd                    ;         ;
+; mypll.vhd                        ; yes             ; User Wizard-Generated File  ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/mypll.vhd                  ;         ;
+; mw8731_controller.vhd            ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/mw8731_controller.vhd      ;         ;
+; mTXD.vhd                         ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/mTXD.vhd                   ;         ;
+; mTransmitter.vhd                 ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/mTransmitter.vhd           ;         ;
+; i2c_master_writer.vhd            ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/i2c_master_writer.vhd      ;         ;
+; i2c_clk_prescaler.vhd            ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/i2c_clk_prescaler.vhd      ;         ;
+; fft_utils.vhd                    ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/fft_utils.vhd              ;         ;
+; fft_twiddle_factors_64.vhd       ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/fft_twiddle_factors_64.vhd ;         ;
+; fft_input_deserializer.vhd       ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/fft_input_deserializer.vhd ;         ;
+; fft_dif.vhd                      ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/fft_dif.vhd                ;         ;
+; dsp_slave_reader.vhd             ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/dsp_slave_reader.vhd       ;         ;
+; audio_processor.vhd              ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/audio_processor.vhd        ;         ;
+; AN831.vhd                        ; yes             ; User VHDL File              ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/AN831.vhd                  ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                            ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                           ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                         ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                         ;         ;
++----------------------------------+-----------------+-----------------------------+------------------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -286,16 +287,16 @@ applicable agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 714        ;
+; Estimated Total logic elements              ; 712        ;
 ;                                             ;            ;
-; Total combinational functions               ; 569        ;
+; Total combinational functions               ; 567        ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 203        ;
-;     -- 3 input functions                    ; 81         ;
-;     -- <=2 input functions                  ; 285        ;
+;     -- 4 input functions                    ; 202        ;
+;     -- 3 input functions                    ; 82         ;
+;     -- <=2 input functions                  ; 283        ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 359        ;
+;     -- normal mode                          ; 357        ;
 ;     -- arithmetic mode                      ; 210        ;
 ;                                             ;            ;
 ; Total registers                             ; 422        ;
@@ -309,7 +310,7 @@ applicable agreement for further details.
 ;                                             ;            ;
 ; Maximum fan-out node                        ; iCLK_11MHz ;
 ; Maximum fan-out                             ; 111        ;
-; Total fan-out                               ; 2825       ;
+; Total fan-out                               ; 2820       ;
 ; Average fan-out                             ; 2.83       ;
 +---------------------------------------------+------------+
 
@@ -319,8 +320,8 @@ applicable agreement for further details.
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Library Name ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
-; |top                                                    ; 569 (1)           ; 422 (0)      ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |top                                                                                               ; work         ;
-;    |AN831:AN831|                                        ; 348 (128)         ; 247 (75)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|AN831:AN831                                                                                   ; work         ;
+; |top                                                    ; 567 (1)           ; 422 (0)      ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |top                                                                                               ; work         ;
+;    |AN831:AN831|                                        ; 346 (126)         ; 247 (75)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|AN831:AN831                                                                                   ; work         ;
 ;       |compress:c1|                                     ; 38 (38)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|AN831:AN831|compress:c1                                                                       ; work         ;
 ;       |mw8731_controller:MW8731_CONTROLLER1|            ; 182 (42)          ; 172 (23)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|AN831:AN831|mw8731_controller:MW8731_CONTROLLER1                                              ; work         ;
 ;          |bit_not:uut1|                                 ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|bit_not:uut1                                 ; work         ;
@@ -335,13 +336,13 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                    ;
-+--------+--------------+---------+--------------+--------------+---------------------------+------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance           ; IP Include File                                                              ;
-+--------+--------------+---------+--------------+--------------+---------------------------+------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |top|AN831:AN831|mypll:c0 ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/mypll.vhd ;
-+--------+--------------+---------+--------------+--------------+---------------------------+------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                           ;
++--------+--------------+---------+--------------+--------------+---------------------------+-------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance           ; IP Include File                                                                     ;
++--------+--------------+---------+--------------+--------------+---------------------------+-------------------------------------------------------------------------------------+
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |top|AN831:AN831|mypll:c0 ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/mypll.vhd ;
++--------+--------------+---------+--------------+--------------+---------------------------+-------------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -512,20 +513,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; AN831:AN831|count_value[23]             ; 3       ;
+; AN831:AN831|count_value[23]             ; 2       ;
 ; AN831:AN831|count_value[20]             ; 3       ;
 ; AN831:AN831|count_value[19]             ; 3       ;
-; AN831:AN831|count_value[6]              ; 3       ;
-; AN831:AN831|count_value[5]              ; 3       ;
-; AN831:AN831|count_value[4]              ; 3       ;
-; AN831:AN831|count_value[3]              ; 3       ;
-; AN831:AN831|count_value[2]              ; 3       ;
-; AN831:AN831|count_value[1]              ; 3       ;
-; AN831:AN831|count_value[0]              ; 2       ;
-; AN831:AN831|count_value[15]             ; 3       ;
-; AN831:AN831|count_value[12]             ; 3       ;
 ; AN831:AN831|count_value[10]             ; 3       ;
+; AN831:AN831|count_value[12]             ; 3       ;
 ; AN831:AN831|count_value[9]              ; 3       ;
+; AN831:AN831|count_value[6]              ; 3       ;
+; AN831:AN831|count_value[0]              ; 2       ;
+; AN831:AN831|count_value[1]              ; 3       ;
+; AN831:AN831|count_value[5]              ; 2       ;
+; AN831:AN831|count_value[4]              ; 2       ;
+; AN831:AN831|count_value[3]              ; 2       ;
+; AN831:AN831|count_value[2]              ; 2       ;
+; AN831:AN831|count_value[15]             ; 2       ;
 ; AN831:AN831|cnt[3]                      ; 1       ;
 ; AN831:AN831|cnt[1]                      ; 1       ;
 ; Total number of inverted registers = 16 ;         ;
@@ -948,6 +949,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS           ; ON                      ; AUTO_CASCADE                    ;
 ; IGNORE_CASCADE_BUFFERS        ; OFF                     ; IGNORE_CASCADE                  ;
 +-------------------------------+-------------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AN831:AN831|compress:c1 ;
++-----------------+-------+--------------------------------------------+
+; Parameter Name  ; Value ; Type                                       ;
++-----------------+-------+--------------------------------------------+
+; bits_per_sample ; 24    ; Signed Integer                             ;
++-----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1873,18 +1884,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+-------+----------+----------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "AN831:AN831|mw8731_controller:MW8731_CONTROLLER1"                                                                       ;
-+------------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                                     ; Type   ; Severity ; Details                                                                             ;
-+------------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; reset_n                                  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; programming_done                         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; tmp_left_channel_sample_from_adc[23..20] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; tmp_left_channel_sample_from_adc[7..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; tmp_right_channel_sample_from_adc        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; transmission_to_dac_ongoing              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AN831:AN831|mw8731_controller:MW8731_CONTROLLER1"                                                                ;
++-----------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                              ; Type   ; Severity ; Details                                                                             ;
++-----------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; reset_n                           ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; programming_done                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; tmp_right_channel_sample_from_adc ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; transmission_to_dac_ongoing       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -1946,7 +1955,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1956,7 +1965,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon May 18 16:29:51 2020
+    Info: Processing started: Mon May 18 19:32:17 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 0 entities, in source file trans_pkg.vhd
@@ -2012,13 +2021,13 @@ Info (12021): Found 6 design units, including 3 entities, in source file an831.v
     Info (12023): Found entity 3: send
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "AN831" for hierarchy "AN831:AN831"
-Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(66): object "tmp_right_channel_sample_from_adc_signal" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(73): object "equalized_frequency_sample_left_signal" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(74): object "equalized_frequency_sample_right_signal" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(77): object "tmp_equalized_frequency_sample_left_signal" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(78): object "tmp_equalized_frequency_sample_right_signal" assigned a value but never read
-Warning (10540): VHDL Signal Declaration warning at AN831.vhd(80): used explicit default value for signal "mask_signal" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at AN831.vhd(81): used explicit default value for signal "bin_0_signal" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(61): object "tmp_right_channel_sample_from_adc_signal" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(68): object "equalized_frequency_sample_left_signal" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(69): object "equalized_frequency_sample_right_signal" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(72): object "tmp_equalized_frequency_sample_left_signal" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at AN831.vhd(73): object "tmp_equalized_frequency_sample_right_signal" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at AN831.vhd(75): used explicit default value for signal "mask_signal" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at AN831.vhd(76): used explicit default value for signal "bin_0_signal" because signal was never assigned a value
 Warning (10542): VHDL Variable Declaration warning at AN831.vhd(145): used initial value expression for variable "lim" because variable was never assigned a value
 Info (12128): Elaborating entity "mypll" for hierarchy "AN831:AN831|mypll:c0"
 Info (12128): Elaborating entity "altpll" for hierarchy "AN831:AN831|mypll:c0|altpll:altpll_component"
@@ -2079,6 +2088,14 @@ Info (12133): Instantiated megafunction "AN831:AN831|mypll:c0|altpll:altpll_comp
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "valid_lock_multiplier" = "1"
 Info (12128): Elaborating entity "compress" for hierarchy "AN831:AN831|compress:c1"
+Warning (10492): VHDL Process Statement warning at AN831.vhd(225): signal "mid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at AN831.vhd(228): signal "mid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at AN831.vhd(231): signal "mid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at AN831.vhd(234): signal "mid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at AN831.vhd(237): signal "mid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at AN831.vhd(240): signal "mid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at AN831.vhd(243): signal "mid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at AN831.vhd(246): signal "mid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "send" for hierarchy "AN831:AN831|send:c2"
 Info (12128): Elaborating entity "audio_processor" for hierarchy "AN831:AN831|audio_processor:AUDIO_PROCESSOR"
 Warning (10036): Verilog HDL or VHDL warning at audio_processor.vhd(32): object "new_vector_signal" assigned a value but never read
@@ -2127,15 +2144,15 @@ Info (10041): Inferred latch for "data_buf[7]" at mTXD.vhd(58)
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 732 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 730 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 723 logic cells
+    Info (21061): Implemented 721 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4694 megabytes
-    Info: Processing ended: Mon May 18 16:29:57 2020
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4690 megabytes
+    Info: Processing ended: Mon May 18 19:32:21 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

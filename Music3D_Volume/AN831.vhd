@@ -32,16 +32,11 @@ architecture AN831_impl of AN831 is
             locked		: OUT STD_LOGIC 
         );
 		END component;
-	component fdiv
-	generic(N: integer:=2);
-	port(
-        clkin: IN std_logic;
-        clkout: OUT std_logic
-		);
-	end component;
+
 	component compress
+	generic(bits_per_sample:integer);
 	port(
-        in_value : in std_logic_vector(11 downto 0):= (others => '0');
+        in_value : in std_logic_vector(bits_per_sample - 1 downto 0):= (others => '0');
         out_value: out std_logic_vector(7 downto 0) := (others => '0')
 		);
 	end component;
@@ -100,7 +95,10 @@ begin
         inclk0 => iCLK_100,
         c0 => iCLK_50
     );
-	c1: compress port map(in_value => std_logic_vector(tmp_left_channel_sample_from_adc_signal(bits_per_sample - 1 - 4 downto bits_per_sample - 16)), out_value => level);
+	c1: compress 
+	generic map(bits_per_sample => bits_per_sample)
+	port map(in_value => std_logic_vector(tmp_left_channel_sample_from_adc_signal), out_value => level);
+
 	c2: send port map(
 		in7 => level,
 		in6 => level,
@@ -209,39 +207,43 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 USE ieee.std_logic_unsigned.all;
-entity compress is 
+entity compress is
+	generic (
+		bits_per_sample:              integer := 24);
 	port(
-		in_value : in std_logic_vector(11 downto 0):= (others => '0');
+		in_value : in std_logic_vector(bits_per_sample - 1 downto 0):= (others => '0');
 		out_value: out std_logic_vector(7 downto 0) := (others => '0')
 	);
 end compress;
 
 architecture compress_impl of compress is 
 -- signal tmp: std_logic_vector(3 downto 0) := 0;
+	signal mid: std_logic_vector(11 downto 0) := (others => '0');
 	begin
+		mid <= in_value(bits_per_sample - 1 - 4 downto bits_per_sample - 16);
 		process(in_value) begin
-			if (CONV_INTEGER(in_value) > 750) then
+			if (CONV_INTEGER(mid) > 750) then
 			out_value <= "10000000";
 			--   tmp <= "1000";
-			elsif (CONV_INTEGER(in_value)>300) then
+			elsif (CONV_INTEGER(mid)>300) then
 			out_value <= "01000000";
 			--   tmp <= "0111";
-			elsif (CONV_INTEGER(in_value)>120) then
+			elsif (CONV_INTEGER(mid)>120) then
 			out_value <= "00100000";
 			--   tmp <= "0110";
-			elsif (CONV_INTEGER(in_value)>60) then
+			elsif (CONV_INTEGER(mid)>60) then
 			out_value <= "00010000";
 			--   tmp <= "0101";
-			elsif (CONV_INTEGER(in_value)>30) then
+			elsif (CONV_INTEGER(mid)>30) then
 			out_value <= "00001000";
 			--   tmp <= "0100";
-			elsif (CONV_INTEGER(in_value)>16) then
+			elsif (CONV_INTEGER(mid)>16) then
 			out_value <= "00000100";
 			--   tmp <= "0011";
-			elsif (CONV_INTEGER(in_value)>8) then
+			elsif (CONV_INTEGER(mid)>8) then
 			out_value <= "00000010";
 			--   tmp <= "0010";
-			elsif (CONV_INTEGER(in_value)>4) then
+			elsif (CONV_INTEGER(mid)>4) then
 			out_value <= "00000001";
 			--   tmp <= "0001";
 			else

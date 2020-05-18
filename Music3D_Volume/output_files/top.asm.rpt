@@ -1,5 +1,5 @@
 Assembler report for top
-Mon May 18 16:30:19 2020
+Mon May 18 19:32:34 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/output_files/top.sof
-  6. Assembler Device Options: D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/output_files/top.pof
+  5. Assembler Device Options: D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/output_files/top.sof
+  6. Assembler Device Options: D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/output_files/top.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 18 16:30:19 2020 ;
+; Assembler Status      ; Successful - Mon May 18 19:32:34 2020 ;
 ; Revision Name         ; top                                   ;
 ; Top-level Entity Name ; top                                   ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                               ;
-+-----------------------------------------------------------------------------------------+
-; File Name                                                                               ;
-+-----------------------------------------------------------------------------------------+
-; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/output_files/top.sof ;
-; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/output_files/top.pof ;
-+-----------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                      ;
++------------------------------------------------------------------------------------------------+
+; File Name                                                                                      ;
++------------------------------------------------------------------------------------------------+
+; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/output_files/top.sof ;
+; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/output_files/top.pof ;
++------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/output_files/top.sof ;
-+----------------+--------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                          ;
-+----------------+--------------------------------------------------------------------------------------------------+
-; Device         ; EP2C70F672C8                                                                                     ;
-; JTAG usercode  ; 0x00663BC2                                                                                       ;
-; Checksum       ; 0x00663BC2                                                                                       ;
-+----------------+--------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/output_files/top.sof ;
++----------------+---------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                 ;
++----------------+---------------------------------------------------------------------------------------------------------+
+; Device         ; EP2C70F672C8                                                                                            ;
+; JTAG usercode  ; 0x0066548C                                                                                              ;
+; Checksum       ; 0x0066548C                                                                                              ;
++----------------+---------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D/output_files/top.pof ;
-+--------------------+----------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                      ;
-+--------------------+----------------------------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                                       ;
-; JTAG usercode      ; 0x00000000                                                                                   ;
-; Checksum           ; 0x18752FA3                                                                                   ;
-; Compression Ratio  ; 3                                                                                            ;
-+--------------------+----------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_Volume/output_files/top.pof ;
++--------------------+-----------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                             ;
++--------------------+-----------------------------------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                                              ;
+; JTAG usercode      ; 0x00000000                                                                                          ;
+; Checksum           ; 0x1872FB98                                                                                          ;
+; Compression Ratio  ; 3                                                                                                   ;
++--------------------+-----------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon May 18 16:30:14 2020
+    Info: Processing started: Mon May 18 19:32:31 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off top -c top
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4591 megabytes
-    Info: Processing ended: Mon May 18 16:30:19 2020
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Mon May 18 19:32:35 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
