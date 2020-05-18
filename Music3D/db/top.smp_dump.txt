@@ -1,0 +1,55 @@
+
+State Machine - |top|mTransmitter:mTransmitter|current_state
+Name current_state.finish current_state.send current_state.start current_state.idle 
+current_state.idle 0 0 0 0 
+current_state.start 0 0 1 1 
+current_state.send 0 1 0 1 
+current_state.finish 1 0 0 1 
+
+State Machine - |top|mTransmitter:mTransmitter|mTXD:txd|TX_current_stat
+Name TX_current_stat.finish TX_current_stat.send TX_current_stat.start TX_current_stat.idle 
+TX_current_stat.idle 0 0 0 0 
+TX_current_stat.start 0 0 1 1 
+TX_current_stat.send 0 1 0 1 
+TX_current_stat.finish 1 0 0 1 
+
+State Machine - |top|AN831:AN831|state
+Name state.available state.idle state.counting 
+state.counting 0 0 0 
+state.idle 0 1 1 
+state.available 1 0 1 
+
+State Machine - |top|AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|state
+Name state.receive state.reg0001001activate state.reg0001000 state.reg0000111 state.reg0000110 state.reg0000101 state.reg0000100 state.reg0000011 state.reg0000010 state.reg0000001 state.reg0000000 state.reg0001001deactivate state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.reg0001001deactivate 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.reg0000000 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.reg0000001 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.reg0000010 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.reg0000011 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.reg0000100 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.reg0000101 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.reg0000110 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.reg0000111 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.reg0001000 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.reg0001001activate 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.receive 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|dsp_slave_reader:DSP_SLAVE_READER_INSTANCE|state
+Name state.available_data state.receive_data state.idle 
+state.idle 0 0 0 
+state.receive_data 0 1 1 
+state.available_data 1 0 1 
+
+State Machine - |top|AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|i2c_master_writer:I2C_MASTER_WRITER_INSTANCE|state
+Name state.stop_signal state.ack_byte2 state.send_byte2 state.ack_byte1 state.send_byte1 state.ack_address state.send_write_bit state.send_address state.start_signal state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 0 
+state.start_signal 0 0 0 0 0 0 0 0 1 1 
+state.send_address 0 0 0 0 0 0 0 1 0 1 
+state.send_write_bit 0 0 0 0 0 0 1 0 0 1 
+state.ack_address 0 0 0 0 0 1 0 0 0 1 
+state.send_byte1 0 0 0 0 1 0 0 0 0 1 
+state.ack_byte1 0 0 0 1 0 0 0 0 0 1 
+state.send_byte2 0 0 1 0 0 0 0 0 0 1 
+state.ack_byte2 0 1 0 0 0 0 0 0 0 1 
+state.stop_signal 1 0 0 0 0 0 0 0 0 1 

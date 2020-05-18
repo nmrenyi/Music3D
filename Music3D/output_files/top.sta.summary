@@ -1,0 +1,197 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'iCLK_100'
+Slack : -6.462
+TNS   : -49.008
+
+Type  : Slow Model Setup 'mTransmitter:mTransmitter|current_state.finish'
+Slack : -6.144
+TNS   : -34.327
+
+Type  : Slow Model Setup 'iCLK_11MHz'
+Slack : -5.304
+TNS   : -557.720
+
+Type  : Slow Model Setup 'AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|i2c_clk_prescaler:I2C_CLK_PRESCALER_INSTANCE|clk_100kHz_int'
+Slack : -3.545
+TNS   : -156.044
+
+Type  : Slow Model Setup 'AUD_BCLK'
+Slack : -3.268
+TNS   : -236.410
+
+Type  : Slow Model Setup 'mTransmitter:mTransmitter|mTXD:txd|TX_current_stat.start'
+Slack : -2.176
+TNS   : -15.343
+
+Type  : Slow Model Setup 'AN831:AN831|out_page_sample_available'
+Slack : -0.486
+TNS   : -14.167
+
+Type  : Slow Model Setup 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow Model Hold 'iCLK_11MHz'
+Slack : -2.128
+TNS   : -41.932
+
+Type  : Slow Model Hold 'iCLK_100'
+Slack : -1.632
+TNS   : -1.632
+
+Type  : Slow Model Hold 'AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|i2c_clk_prescaler:I2C_CLK_PRESCALER_INSTANCE|clk_100kHz_int'
+Slack : -1.073
+TNS   : -1.672
+
+Type  : Slow Model Hold 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : -0.147
+TNS   : -0.147
+
+Type  : Slow Model Hold 'AUD_BCLK'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'AN831:AN831|out_page_sample_available'
+Slack : 0.534
+TNS   : 0.000
+
+Type  : Slow Model Hold 'mTransmitter:mTransmitter|mTXD:txd|TX_current_stat.start'
+Slack : 0.775
+TNS   : 0.000
+
+Type  : Slow Model Hold 'mTransmitter:mTransmitter|current_state.finish'
+Slack : 0.896
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'iCLK_11MHz'
+Slack : -1.941
+TNS   : -166.665
+
+Type  : Slow Model Minimum Pulse Width 'AUD_BCLK'
+Slack : -1.941
+TNS   : -116.209
+
+Type  : Slow Model Minimum Pulse Width 'AN831:AN831|out_page_sample_available'
+Slack : -0.742
+TNS   : -94.976
+
+Type  : Slow Model Minimum Pulse Width 'AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|i2c_clk_prescaler:I2C_CLK_PRESCALER_INSTANCE|clk_100kHz_int'
+Slack : -0.742
+TNS   : -92.008
+
+Type  : Slow Model Minimum Pulse Width 'mTransmitter:mTransmitter|current_state.finish'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'mTransmitter:mTransmitter|mTXD:txd|TX_current_stat.start'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'iCLK_100'
+Slack : 3.758
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 8.758
+TNS   : 0.000
+
+Type  : Fast Model Setup 'iCLK_100'
+Slack : -1.431
+TNS   : -10.878
+
+Type  : Fast Model Setup 'mTransmitter:mTransmitter|current_state.finish'
+Slack : -1.362
+TNS   : -6.558
+
+Type  : Fast Model Setup 'iCLK_11MHz'
+Slack : -1.066
+TNS   : -107.786
+
+Type  : Fast Model Setup 'AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|i2c_clk_prescaler:I2C_CLK_PRESCALER_INSTANCE|clk_100kHz_int'
+Slack : -0.650
+TNS   : -23.332
+
+Type  : Fast Model Setup 'AUD_BCLK'
+Slack : -0.448
+TNS   : -28.097
+
+Type  : Fast Model Setup 'mTransmitter:mTransmitter|mTXD:txd|TX_current_stat.start'
+Slack : -0.259
+TNS   : -1.476
+
+Type  : Fast Model Setup 'AN831:AN831|out_page_sample_available'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Fast Model Setup 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Fast Model Hold 'iCLK_11MHz'
+Slack : -1.438
+TNS   : -89.265
+
+Type  : Fast Model Hold 'iCLK_100'
+Slack : -1.280
+TNS   : -1.280
+
+Type  : Fast Model Hold 'AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|i2c_clk_prescaler:I2C_CLK_PRESCALER_INSTANCE|clk_100kHz_int'
+Slack : -0.862
+TNS   : -1.592
+
+Type  : Fast Model Hold 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : -0.093
+TNS   : -0.093
+
+Type  : Fast Model Hold 'AUD_BCLK'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'AN831:AN831|out_page_sample_available'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast Model Hold 'mTransmitter:mTransmitter|current_state.finish'
+Slack : 0.521
+TNS   : 0.000
+
+Type  : Fast Model Hold 'mTransmitter:mTransmitter|mTXD:txd|TX_current_stat.start'
+Slack : 0.566
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'iCLK_11MHz'
+Slack : -1.380
+TNS   : -112.380
+
+Type  : Fast Model Minimum Pulse Width 'AUD_BCLK'
+Slack : -1.380
+TNS   : -78.380
+
+Type  : Fast Model Minimum Pulse Width 'AN831:AN831|out_page_sample_available'
+Slack : -0.500
+TNS   : -64.000
+
+Type  : Fast Model Minimum Pulse Width 'AN831:AN831|mw8731_controller:MW8731_CONTROLLER1|i2c_clk_prescaler:I2C_CLK_PRESCALER_INSTANCE|clk_100kHz_int'
+Slack : -0.500
+TNS   : -62.000
+
+Type  : Fast Model Minimum Pulse Width 'mTransmitter:mTransmitter|current_state.finish'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'mTransmitter:mTransmitter|mTXD:txd|TX_current_stat.start'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'iCLK_100'
+Slack : 4.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 9.000
+TNS   : 0.000
+
+------------------------------------------------------------
