@@ -90,7 +90,9 @@ architecture AN831_impl of AN831 is
 
 	type fsm is(idle, counting, available);
     signal state: fsm:=idle;
-    constant counting_limit : integer := 10000000 - 1;
+	constant counting_limit : integer := 10000000 - 1;
+	constant hold_limit : integer := 5000000 + 1;
+	
 	signal count_value : integer := counting_limit;
 	
 begin
@@ -123,7 +125,7 @@ begin
                     state <= counting;
                     out_page_sample_available <= '0';
                 when counting =>
-                    if (count_value < counting_limit) then
+                    if (count_value < hold_limit) then
                         out_page_sample_available <= '0';
                     end if;
                     if (count_value > 1) then
