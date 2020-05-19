@@ -1,0 +1,85 @@
+--lpm_mult DEDICATED_MULTIPLIER_CIRCUITRY="NO" DEVICE_FAMILY="Cyclone II" DSP_BLOCK_BALANCING="AUTO" LPM_PIPELINE=0 LPM_REPRESENTATION="SIGNED" LPM_WIDTHA=4 LPM_WIDTHB=16 LPM_WIDTHP=20 MAXIMIZE_SPEED=5 dataa datab result CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_mult 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_padd 2013:06:12:18:03:43:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ cbx_util_mgl 2013:06:12:18:03:43:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2013 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION carry_sum (cin, sin)
+RETURNS ( cout, sout);
+FUNCTION lcell (in)
+RETURNS ( out);
+FUNCTION soft (in)
+RETURNS ( out);
+
+--synthesis_resources = lut 92 
+SUBDESIGN mult_lao
+( 
+	dataa[3..0]	:	input;
+	datab[15..0]	:	input;
+	result[19..0]	:	output;
+) 
+VARIABLE
+	add11_result[16..0]	:	WIRE;
+	add7_result[19..0]	:	WIRE;
+	cs2a[1..0] : carry_sum;
+	cs4a[1..0] : carry_sum;
+	le3a[16..0] : lcell;
+	le5a[16..0] : lcell;
+	le6a[16..0] : lcell;
+	sft10a[19..0] : soft;
+	sft12a[16..0] : soft;
+	sft13a[16..0] : soft;
+	sft14a[16..0] : soft;
+	sft8a[19..0] : soft;
+	sft9a[19..0] : soft;
+	dataa_node[15..0]	: WIRE;
+	datab_node[3..0]	: WIRE;
+	final_result_node[19..0]	: WIRE;
+	w12w[3..0]	: WIRE;
+	w136w	: WIRE;
+	w13w[16..0]	: WIRE;
+	w156w	: WIRE;
+	w264w[19..0]	: WIRE;
+	w86w[16..0]	: WIRE;
+
+BEGIN 
+	add11_result[] = sft12a[].out + sft13a[].out;
+	add7_result[] = sft8a[].out + sft9a[].out;
+	cs2a[].cin = ( B"0", datab_node[1..1]);
+	cs2a[].sin = ( cs2a[0].cout, datab_node[1..1]);
+	cs4a[].cin = ( B"0", datab_node[1..1]);
+	cs4a[].sin = ( (w12w[2..2] $ cs4a[0].cout), datab_node[0..0]);
+	le3a[].in = (((((w12w[3..3] & (! w12w[2..2])) & (! cs2a[1].sout)) & (! ( dataa_node[], B"0"))) # ((((! w12w[3..3]) & w12w[2..2]) & cs2a[1].sout) & ( dataa_node[], B"0"))) # ((w12w[3..3] & w12w[2..2]) & cs2a[1].sout));
+	le5a[].in = (! ((! le3a[].out) & (! (cs4a[1].sout & (w12w[3..3] $ ( dataa_node[15..15], dataa_node[]))))));
+	le6a[].in = (! ((! (((! ( dataa_node[], B"0")) & cs2a[0].sout) & (! cs4a[0].sout))) & (! ((((! ( dataa_node[15..15], dataa_node[])) & cs2a[0].sout) & cs4a[0].sout) # ((( dataa_node[15..15], dataa_node[]) & (! cs2a[0].sout)) & cs4a[0].sout)))));
+	sft10a[].in = add7_result[];
+	sft12a[].in = ( w156w, ( w136w, ( w136w, ( le6a[15..15].out, ( le6a[14..14].out, ( le6a[13..13].out, ( le6a[12..12].out, ( le6a[11..11].out, ( le6a[10..10].out, ( le6a[9..9].out, ( le6a[8..8].out, ( le6a[7..7].out, ( le6a[6..6].out, ( le6a[5..5].out, ( le6a[4..4].out, ( le6a[3..2].out))))))))))))))));
+	sft13a[].in = ( w156w, ( w156w, ( (! w86w[16..16]), ( w156w, ( w156w, ( w156w, ( w156w, ( w156w, ( w156w, ( w156w, ( w156w, ( w156w, ( w156w, ( w156w, ( w156w, ( w156w, w12w[3..3]))))))))))))))));
+	sft14a[].in = add11_result[];
+	sft8a[].in = ( w136w, ( (! w13w[16..16]), ( le5a[15..15].out, ( le5a[14..14].out, ( le5a[13..13].out, ( le5a[12..12].out, ( le5a[11..11].out, ( le5a[10..10].out, ( le5a[9..9].out, ( le5a[8..8].out, ( le5a[7..7].out, ( le5a[6..6].out, ( le5a[5..5].out, ( le5a[4..4].out, ( le5a[3..3].out, ( le5a[2..2].out, ( le5a[1..1].out, ( le5a[0..0].out, ( le6a[1..0].out)))))))))))))))))));
+	sft9a[].in = ( w156w, ( sft14a[16..16].out, ( sft14a[15..15].out, ( sft14a[14..14].out, ( sft14a[13..13].out, ( sft14a[12..12].out, ( sft14a[11..11].out, ( sft14a[10..10].out, ( sft14a[9..9].out, ( sft14a[8..8].out, ( sft14a[7..7].out, ( sft14a[6..6].out, ( sft14a[5..5].out, ( sft14a[4..4].out, ( sft14a[3..3].out, ( sft14a[2..2].out, ( sft14a[1..1].out, ( sft14a[0..0].out, ( w156w, cs2a[0].sout)))))))))))))))))));
+	dataa_node[] = ( datab[15..0]);
+	datab_node[] = ( dataa[3..0]);
+	final_result_node[] = ( w264w[19..0]);
+	result[] = ( final_result_node[19..0]);
+	w12w[] = datab_node[];
+	w136w = B"1";
+	w13w[] = le5a[].out;
+	w156w = B"0";
+	w264w[] = ( sft10a[19..19].out, sft10a[18..18].out, sft10a[17..17].out, sft10a[16..16].out, sft10a[15..15].out, sft10a[14..14].out, sft10a[13..13].out, sft10a[12..12].out, sft10a[11..11].out, sft10a[10..10].out, sft10a[9..9].out, sft10a[8..8].out, sft10a[7..7].out, sft10a[6..6].out, sft10a[5..5].out, sft10a[4..4].out, sft10a[3..3].out, sft10a[2..2].out, sft10a[1..1].out, sft10a[0..0].out);
+	w86w[] = le6a[].out;
+END;
+--VALID FILE
