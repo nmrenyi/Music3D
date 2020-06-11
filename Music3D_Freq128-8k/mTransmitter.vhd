@@ -107,7 +107,10 @@ begin
                 send_serial <= '1';
                 next_state <= send;
             when send =>
-                data_out <= data_buff(y_counter)(7 downto 0); -- (x_counter+1)*8-1 downto x_counter*8
+                -- data_out <= data_buff(y_counter)(7 downto 0) + data_buff(y_counter)(15 downto 8) + data_buff(y_counter)(23 downto 16) + data_buff(y_counter)(31 downto 24) + data_buff(y_counter)(39 downto 32) + data_buff(y_counter)(47 downto 40) + data_buff(y_counter)(55 downto 48) + data_buff(y_counter)(63 downto 56); -- (x_counter+1)*8-1 downto x_counter*8
+                -- data_out <= data_buff(y_counter)(7 downto 0); -- (x_counter+1)*8-1 downto x_counter*8
+                data_out <= data_buff(y_counter)((x_counter+1)*8-1 downto x_counter*8); -- (x_counter+1)*8-1 downto x_counter*8
+                
                 send_serial <= '1';
                 if((y_counter = 7)and(x_counter = 7)) then -- all 64 bits complete
                     next_state <= finish;

@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity top is 
 generic (
-    fft_size_exp:                 integer := 7;
+    fft_size_exp:                 integer := 6;
     bits_per_sample:              integer := 16);
 port (
     iCLK_100:                in    std_logic;    --100MHz

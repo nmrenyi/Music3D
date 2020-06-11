@@ -5,8 +5,8 @@ use work.fft_utils.bit_reverse;
 
 entity AN831 is
 	generic (
-		fft_size_exp:                 integer := 4;
-		bits_per_sample:              integer := 24);
+		fft_size_exp:                 integer := 5;
+		bits_per_sample:              integer := 16);
 	port (
 		iCLK_100:                in    std_logic;    --100MHz
 

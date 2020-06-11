@@ -57,10 +57,10 @@ architecture audio_processor_impl of audio_processor is
 		);
 	end component;
 begin	
-	mask_int(2** fft_size_exp      - 1 downto 2**(fft_size_exp - 1) + 1) <= bit_reverse(mask);
-	mask_int(2**(fft_size_exp - 1)                                     ) <= '1';
-	mask_int(2**(fft_size_exp - 1) - 1 downto 1                        ) <= mask;
-	mask_int(0                                                         ) <= bin_0;
+--	mask_int(2** fft_size_exp      - 1 downto 2**(fft_size_exp - 1) + 1) <= bit_reverse(mask);
+--	mask_int(2**(fft_size_exp - 1)                                     ) <= '1';
+--	mask_int(2**(fft_size_exp - 1) - 1 downto 1                        ) <= mask;
+--	mask_int(0                                                         ) <= bin_0;
 
 	equalized_frequency_sample_left  <= divide_and_resize_all(post_fft_left_re_natural_masked, 2**fft_size_exp, bits_per_sample + fft_size_exp, 2**(fft_size_exp - 1), bits_per_sample);
 	equalized_frequency_sample_right <= divide_and_resize_all(post_fft_right_re_natural_masked, 2**fft_size_exp, bits_per_sample + fft_size_exp, 2**(fft_size_exp - 1), bits_per_sample);
@@ -70,18 +70,30 @@ begin
 
 
 
-	process(post_fft_left_re_natural, post_fft_right_re_natural, mask_int)
+--	process(post_fft_left_re_natural, post_fft_right_re_natural, mask_int)
+--		variable many_bits: std_logic_vector((bits_per_sample + fft_size_exp) - 1 downto 0);
+--	begin
+--		for i in fft_size downto 1 loop
+--			many_bits := (others => mask_int(i - 1));
+--			post_fft_left_re_natural_masked (i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp)) <= 
+--				  post_fft_left_re_natural  (i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp)) and many_bits;
+--			post_fft_right_re_natural_masked(i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp)) <= 
+--				  post_fft_right_re_natural (i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp)) and many_bits;
+--		end loop;
+--	end process;
+	
+	---unmasked
+	process(post_fft_left_re_natural, post_fft_right_re_natural)
 		variable many_bits: std_logic_vector((bits_per_sample + fft_size_exp) - 1 downto 0);
 	begin
 		for i in fft_size downto 1 loop
 			many_bits := (others => mask_int(i - 1));
 			post_fft_left_re_natural_masked (i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp)) <= 
-				  post_fft_left_re_natural  (i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp)) and many_bits;
+				  post_fft_left_re_natural  (i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp));
 			post_fft_right_re_natural_masked(i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp)) <= 
-				  post_fft_right_re_natural (i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp)) and many_bits;
+				  post_fft_right_re_natural (i * (bits_per_sample + fft_size_exp) - 1 downto (i - 1) * (bits_per_sample + fft_size_exp));
 		end loop;
 	end process;
-
 	FFT_INPUT_FORMER1: entity work.fft_input_deserializer
 	generic map (
 		number_of_samples => fft_size,
