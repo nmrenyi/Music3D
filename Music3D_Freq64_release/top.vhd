@@ -1,3 +1,33 @@
+-----------------------------------------------------------
+--
+-- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
+--
+-----------------------------------------------------------
+-- top.vhd
+-- create time: 2020-05-01
+-- target chip: EP2C70F672C8
+-- clock selection: iCLK_100 = 100MHz, iCLK_11MHz = 11MHz
+-- demo info: Use AN831 module for AUD_BCLK, AUD_ADCLRCK, iAUD_ADCDAT input and I2C_SDAT, oI2C_SCLK output. 
+--            Use a click button for Mode input.
+--            Use LightCube for tx_out.
+--
+-- main signal:
+--             Input:      iCLK_100    | System clock at 100 MHz
+--                         iCLK_11MHz  | System clock at 11 MHz
+--                         Mode        | Audio CODEC Bit-Stream Clock
+--                         AUD_BCLK    | Input command : Input data valid
+--                         AUD_ADCLRCK | Audio CODEC ADC LR Clock
+--                         iAUD_ADCDAT | Audio CODEC ADC Data
+--
+--             Output:     tx_out      | TX line 
+--                         I2C_SDAT    | I2C Data
+--                         oI2C_SCLK   | I2C Clock
+--       
+-- main process: AN831:       : Read AN831 module output, do FFT, prepare light information for light cube.
+--               mTransmitter : Pack data to RX/TX output
+-- main function: Get data from audio module, do FFT, and package data to RX/TX output
+-----------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -7,16 +37,14 @@ generic (
     fft_size_exp:                 integer := 6;
     bits_per_sample:              integer := 24);
 port (
-    iCLK_100:                in    std_logic;    --100MHz
-    iCLK_11MHz:              in    std_logic;    --11MHz
-	 
-	 Mode:                     in    std_logic;
-
+    iCLK_100:               in    std_logic;    --100MHz
+    iCLK_11MHz:             in    std_logic;    --11MHz
+	Mode:                   in    std_logic;
     AUD_BCLK:               in    std_logic;    --Audio CODEC Bit-Stream Clock
     AUD_ADCLRCK:            in    std_logic;    --Audio CODEC ADC LR Clock
-    iAUD_ADCDAT:            in    std_logic;    --Audio CODEC ADC Data               
-    tx_out: out std_logic;
-    
+    iAUD_ADCDAT:            in    std_logic;    --Audio CODEC ADC Data  
+
+    tx_out:                 out   std_logic;
     I2C_SDAT:               out   std_logic;    --I2C Data
     oI2C_SCLK:              out   std_logic    --I2C Clock
 );
