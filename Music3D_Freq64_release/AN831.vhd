@@ -8,14 +8,14 @@ entity AN831 is
 		fft_size_exp:                 integer := 4;
 		bits_per_sample:              integer := 24);
 	port (
-		iCLK_100:                in    std_logic;    --100MHz
+		iCLK_100:                in    std_logic;    --100MHz clock
 
 		AUD_BCLK:               in    std_logic;    --Audio CODEC Bit-Stream Clock
 		AUD_ADCLRCK:            in    std_logic;    --Audio CODEC ADC LR Clock
 		iAUD_ADCDAT:            in    std_logic;    --Audio CODEC ADC Data               
 		
-		out_page:				out   std_logic_vector(63 downto 0) := (others => '0');
-		out_page_sample_available: out std_logic := '0';
+		out_page:				out   std_logic_vector(63 downto 0) := (others => '0');    --light information for a single frame
+		out_page_sample_available: out std_logic := '0';    --light information available signal
 		
 		I2C_SDAT:               out   std_logic;    --I2C Data
 		oI2C_SCLK:              out   std_logic    --I2C Clock
@@ -23,6 +23,8 @@ entity AN831 is
 end AN831;
 
 architecture AN831_impl of AN831 is
+
+	-- component declarations
     component mypll IS
         PORT
         (
@@ -32,7 +34,6 @@ architecture AN831_impl of AN831 is
             locked		: OUT STD_LOGIC 
         );
 		END component;
-
 	component compress
 	generic(bits_per_sample:integer);
 	port(
@@ -53,34 +54,43 @@ architecture AN831_impl of AN831 is
 		out_page: out std_logic_vector(63 downto 0) := (others => '0')
 	);
 	end component;
+
+	-- other signal declarations
 	constant number_of_samples:                     integer := 2**fft_size_exp;
-	
 	signal reset_n_signal:                          std_logic;
 	signal start_signal:                            std_logic;
+
+	-- original code for ADC signal
 	signal tmp_left_channel_sample_from_adc_signal:     signed(bits_per_sample - 1 downto 0);
 	signal tmp_right_channel_sample_from_adc_signal:    signed(bits_per_sample - 1 downto 0);
-
 	
+	-- two's complement code for ADC signal
 	signal left_channel_sample_from_adc_signal:     signed(bits_per_sample - 1 downto 0);
 	signal right_channel_sample_from_adc_signal:    signed(bits_per_sample - 1 downto 0);
 	signal sample_available_from_adc_signal:        std_logic;
 	
+	-- two's complement code for FFT
 	signal equalized_frequency_sample_left_signal:  std_logic_vector(2**fft_size_exp * bits_per_sample - 1 downto 0);
 	signal equalized_frequency_sample_right_signal: std_logic_vector(2**fft_size_exp * bits_per_sample - 1 downto 0);
-
-
+	
+	-- original code for FFT
 	signal tmp_equalized_frequency_sample_left_signal:  std_logic_vector(2**fft_size_exp * bits_per_sample - 1 downto 0);
 	signal tmp_equalized_frequency_sample_right_signal: std_logic_vector(2**fft_size_exp * bits_per_sample - 1 downto 0);
 
+	-- mask signals, which we do not use in final version
 	signal mask_signal:                             std_logic_vector(2**(fft_size_exp - 1) - 2 downto 0) := (others => '1');
 	signal bin_0_signal:                            std_logic := '1';
-
 	signal mask_out:                                std_logic_vector(15 downto 0);
 	signal iSW_my:									std_logic_vector(17 downto 0) := (others => '0');
 	signal start_delay:                             std_logic;
+	
+	-- 50MHz clock
 	signal iCLK_50:          std_logic:='0'; 
+	
+	-- record of light signal per frame
 	signal out_page_tmp: std_logic_vector(63 downto 0) := (others => '0');
 
+	-- 8 frequency information for light cube
 	signal f1: std_logic_vector(7 downto 0) := (others => '0');
 	signal f2: std_logic_vector(7 downto 0) := (others => '0');
 	signal f3: std_logic_vector(7 downto 0) := (others => '0');
@@ -90,24 +100,30 @@ architecture AN831_impl of AN831 is
 	signal f7: std_logic_vector(7 downto 0) := (others => '0');
 	signal f8: std_logic_vector(7 downto 0) := (others => '0');
 	
-
+	-- Finite State Machine for sending
 	type fsm is(idle, counting, available);
-    signal state: fsm:=idle;
+	signal state: fsm:=idle;
+	
+	-- send outpage every 0.1s, duty cycle = 50
 	constant counting_limit : integer := 10000000 - 1;
 	constant hold_limit : integer := 5000000 + 1;
-	
 	signal count_value : integer := counting_limit;
 	
 begin
+
+	-- use PLL for clock division, from 100MHz to 50MHz
     c0:mypll port map(
         inclk0 => iCLK_100,
         c0 => iCLK_50
 	);
 	
+	-- temp code for volume version of light cube
 	-- c1: compress 
 	-- generic map(bits_per_sample => bits_per_sample)
 	-- port map(in_value => std_logic_vector(tmp_left_channel_sample_from_adc_signal), out_value => level);
 
+
+	-- freq1 to freq8 aim to extract 8 different frequency signals into f1 to f8
 	freq1: compress 
 	generic map(bits_per_sample => bits_per_sample)
 	port map(
@@ -158,6 +174,7 @@ begin
 		out_value => f8
 	);
 	
+	-- convert f1-f8 to a single signal, out_page_tmp
 	c2: send port map(
 		in7 => f8,
 		in6 => f7,
@@ -170,10 +187,11 @@ begin
 		out_page => out_page_tmp
 	);
 	
-	reset_n_signal <= '1';  -- reset signal should be '1' to work normally, my change
+
+	reset_n_signal <= '1';  -- reset signal should be '1' to work normally
 	start_signal <= start_delay;  -- start signal should be '1' to work normally
 
-	-- send signal every 0.1s
+	-- send signal every 0.1s, duty cycle = 50
     process(iCLK_100) begin
         if (rising_edge(iCLK_100)) then
             case state is
@@ -213,6 +231,7 @@ begin
 		end if;
 	end process;
 
+	-- Audio process module for FFT
 	AUDIO_PROCESSOR: entity work.audio_processor
 	generic map (
 		fft_size_exp =>                     fft_size_exp,
@@ -234,6 +253,7 @@ begin
 		bin_0 =>                            bin_0_signal,
 		mask =>                             mask_signal);
 
+	-- WM8731 control module, for reading ADC signal and configure WM8731
 	MW8731_CONTROLLER1: entity work.mw8731_controller
 	generic map (
 		number_of_samples =>             number_of_samples,
@@ -261,10 +281,10 @@ begin
 	
 end AN831_impl;
 
+-- extract frequency information into different levels for light cube
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
 USE ieee.std_logic_unsigned.all;
 entity compress is
 	generic (
@@ -274,45 +294,34 @@ entity compress is
 		out_value: out std_logic_vector(7 downto 0) := (others => '0')
 	);
 end compress;
-
 architecture compress_impl of compress is 
--- signal tmp: std_logic_vector(3 downto 0) := 0;
 	signal mid: std_logic_vector(11 downto 0) := (others => '0');
 	begin
 		mid <= in_value(bits_per_sample - 1 - 4 downto bits_per_sample - 16);
 		process(in_value) begin
 			if (CONV_INTEGER(mid) > 750) then
-			out_value <= "11111111";
-			--   tmp <= "1000";
+				out_value <= "11111111";    -- light up all 8 lights in one bar
 			elsif (CONV_INTEGER(mid)>300) then
-			out_value <= "01111111";
-			--   tmp <= "0111";
+				out_value <= "01111111";
 			elsif (CONV_INTEGER(mid)>120) then
-			out_value <= "00111111";
-			--   tmp <= "0110";
+				out_value <= "00111111";
 			elsif (CONV_INTEGER(mid)>60) then
-			out_value <= "00011111";
-			--   tmp <= "0101";
+				out_value <= "00011111";
 			elsif (CONV_INTEGER(mid)>30) then
-			out_value <= "00001111";
-			--   tmp <= "0100";
+				out_value <= "00001111";
 			elsif (CONV_INTEGER(mid)>16) then
-			out_value <= "00000111";
-			--   tmp <= "0011";
+				out_value <= "00000111";
 			elsif (CONV_INTEGER(mid)>8) then
-			out_value <= "00000011";
-			--   tmp <= "0010";
+				out_value <= "00000011";
 			elsif (CONV_INTEGER(mid)>4) then
-			out_value <= "00000001";
-			--   tmp <= "0001";
+				out_value <= "00000001";    -- light up the lowest light in one bar
 			else
-			out_value <= "00000000";
-			--   tmp <= "0000";
+				out_value <= "00000000";	-- no light in this bar
 			end if;
 		end process;
 end compress_impl;
 
-
+-- convert 8 different frequency signals into a big vector
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
