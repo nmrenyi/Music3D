@@ -1,3 +1,27 @@
+-----------------------------------------------------------
+--
+-- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
+--
+-----------------------------------------------------------
+-- mw8731_controller.vhd
+-- create time: 2020-05-01
+-- target chip: EP2C70F672C8
+-- clock selection: clk_50MHz = 50MHz
+-- main signal:
+--             Input:      clk_50MHz   | System clock at 50 MHz
+--
+--             Output:     left_channel_sample_from_adc  		| left channel audio data (two's complement code)
+--						   right_channel_sample_from_adc 		| right channel audio data (two's complement code)
+--                         sample_available_from_adc    		| audio sample data ready
+--                         tmp_left_channel_sample_from_adc   	| left channel audio data(original code)
+--       				   tmp_right_channel_sample_from_adc	| right channel audio data(original code)
+-- main process: uut1, uut2         : convert two's complement to original code
+--               I2C_MASTER_WRITER_INSTANCE : config WM8731 chip
+--				 DSP_SLAVE_READER_INSTANCE  : read audio data from WM8731
+-- main function: Read AN831 module output, do FFT, prepare light information for light cube.
+-----------------------------------------------------------
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -101,6 +125,7 @@ begin
 		adcdat => adcdat
 	);
 	
+	-- config WM8731 registers
 	process (reset_n, clk_100kHz) 
 	begin
 		if(reset_n = '0') then
@@ -222,7 +247,7 @@ begin
 
 end wm8731_controller_impl;
 
-
+-- convert two's complement to original code
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

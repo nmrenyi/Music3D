@@ -1,3 +1,28 @@
+-----------------------------------------------------------
+--
+-- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
+--
+-----------------------------------------------------------
+-- AN831.vhd
+-- create time: 2020-05-01
+-- target chip: EP2C70F672C8
+-- clock selection: iCLK_100 = 100MHz
+-- main signal:
+--             Input:      iCLK_100    | System clock at 100 MHz
+--                         AUD_BCLK    | Input command : Input data valid
+--                         AUD_ADCLRCK | Audio CODEC ADC LR Clock
+--                         iAUD_ADCDAT | Audio CODEC ADC Data
+--
+--             Output:     outpage     				 | Light information in one frame
+--						   out_page_sample_available | Light information available signal
+--                         I2C_SDAT    				 | I2C Data
+--                         oI2C_SCLK   			     | I2C Clock
+--       
+-- main process: AUDIO_PROCESSOR    : do FFT
+--               MW8731_CONTROLLER1 : Read AN831 audio output, config WM8731 registers
+-- main function: Read AN831 module output, do FFT, prepare light information for light cube.
+-----------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

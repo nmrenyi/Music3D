@@ -34,8 +34,8 @@ use ieee.numeric_std.all;
 
 entity top is 
 generic (
-    fft_size_exp:                 integer := 6;
-    bits_per_sample:              integer := 24);
+    fft_size_exp:                 integer := 6;  -- FFT size = 2^fft_size_exp, here we use 64 point FFT
+    bits_per_sample:              integer := 24);-- 24 bits per sample
 port (
     iCLK_100:               in    std_logic;    --100MHz
     iCLK_11MHz:             in    std_logic;    --11MHz
