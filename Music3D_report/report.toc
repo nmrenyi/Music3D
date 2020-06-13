@@ -1,13 +1,19 @@
-\contentsline {section}{\numberline {1}实验目的}{3}% 
-\contentsline {section}{\numberline {2}实验完成情况与任务分工}{3}% 
-\contentsline {subsection}{\numberline {2.1}完成情况}{3}% 
-\contentsline {subsection}{\numberline {2.2}任务分工}{3}% 
-\contentsline {section}{\numberline {3}实验演示说明}{4}% 
-\contentsline {section}{\numberline {4}文件说明}{5}% 
-\contentsline {section}{\numberline {5}总体设计}{5}% 
-\contentsline {section}{\numberline {6}关键技术分析}{5}% 
-\contentsline {subsection}{\numberline {6.1}Fast Fourier Transformation}{5}% 
-\contentsline {section}{\numberline {7}程序注释}{5}% 
-\contentsline {section}{\numberline {8}波形仿真结果说明}{5}% 
-\contentsline {section}{\numberline {9}遇到问题与解决方法}{5}% 
-\contentsline {section}{\numberline {10}实验总结}{5}% 
+\contentsline {section}{\numberline {1}实验目的}{3}
+\contentsline {section}{\numberline {2}实验完成情况与任务分工}{3}
+\contentsline {subsection}{\numberline {2.1}完成情况}{3}
+\contentsline {subsection}{\numberline {2.2}任务分工}{3}
+\contentsline {section}{\numberline {3}实验演示说明}{4}
+\contentsline {section}{\numberline {4}文件说明}{5}
+\contentsline {section}{\numberline {5}总体设计}{5}
+\contentsline {section}{\numberline {6}关键技术分析}{5}
+\contentsline {subsection}{\numberline {6.1}Fast Fourier Transformation}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {6.2}串口协议通信}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {6.3}灯光信息整合输出}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {section}{\numberline {7}程序注释}{6}
+\contentsline {section}{\numberline {8}波形仿真结果说明}{6}
+\contentsline {section}{\numberline {9}遇到问题与解决方法}{6}
+\contentsline {section}{\numberline {10}实验总结}{6}
