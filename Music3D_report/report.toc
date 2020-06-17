@@ -24,4 +24,5 @@
 \contentsline {section}{\numberline {9}遇到问题与解决方法}{8}% 
 \contentsline {subsection}{\numberline {9.1}FPGA逻辑资源不足}{8}% 
 \contentsline {paragraph}{}{8}% 
+\contentsline {subsection}{\numberline {9.2}时序问题}{9}% 
 \contentsline {section}{\numberline {10}实验总结}{9}% 

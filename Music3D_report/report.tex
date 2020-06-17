@@ -178,6 +178,11 @@ FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收�
 但由于本项目使用的是WM8731的DSP模式传输数据，在DSP模式下WM8731模块仅支持24bit的采样深度，因此我们最终没有采用这种优化方案。此外，也可以
 考虑从FFT的算法本身进行改进，例如利用移位代替乘除法等方法，降低硬件逻辑资源使用率。
 
+\subsection{时序问题}
+在编译时，我曾遇到Critical Warning(332148): Timing requirements not met. 这样的问题。
+经过与助教讨论，我意识到这是时序出现了问题。
+经过对项目中使用的时钟加入限制后，再次编译基本解决了这个问题。
+
 \section{实验总结}
 
 \end{document}
