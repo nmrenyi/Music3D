@@ -18,7 +18,7 @@
 -- main process: uut1, uut2         : convert two's complement to original code
 --               I2C_MASTER_WRITER_INSTANCE : config WM8731 chip
 --				 DSP_SLAVE_READER_INSTANCE  : read audio data from WM8731
--- main function: Read AN831 module output, do FFT, prepare light information for light cube.
+-- main function: Read AN831 module output, config WM8731 registers.
 -----------------------------------------------------------
 
 

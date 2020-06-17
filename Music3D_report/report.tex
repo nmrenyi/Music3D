@@ -4,7 +4,7 @@
 \usepackage{amsmath}
 \usepackage{enumerate}
 \usepackage{diagbox}
-
+\usepackage{url}
 \newcommand{\Zmod}{\left|Z\right|}
 
 \begin{document}
@@ -74,14 +74,35 @@
 展示视频链接如下：
 
 \section{文件说明}
+本项目文件说明如下表：\footnote{完成者中带*的，为参考了\url{https://github.com/Ugon/fpga-fft-equalizer}或直接使用Altera中的PLL，并非完全独立实现。}
+\begin{table}[h]
+    \begin{tabular}{|l|l|l|}
+    \hline
+    文件名                           & 功能                                       & 完成者 \\ \hline
+    AN831.vhd                     & 读入AN831模块的输出，进行FFT                & 任一  \\ \hline
+    audio\_processor.vhd          & 由时域数字信号做FFT得到频域数字信号                      & 任一*  \\ \hline
+    dsp\_slave\_reader.vhd        & 将串行的ADCDAT以样本点为单位转为并行                    & 任一*  \\ \hline
+    fft\_dif.vhd                  & 递归实现FFT                                  & 任一*  \\ \hline
+    fft\_input\_deserializer.vhd  & 为FFT准备时域信号                               & 任一*  \\ \hline
+    fft\_twiddle\_factors\_64.vhd & FFT计算中用到的旋转因子                            & 任一*  \\ \hline
+    fft\_utils.vhd                & FFT计算中用到的函数                              & 任一*  \\ \hline
+    i2c\_clk\_prescaler.vhd       & 时钟分频，由50MHz转换为100kHz                     & 任一* \\ \hline
+    i2c\_master\_writer.vhd       & 配置WM8731芯片寄存器                            & 任一*  \\ \hline
+    mTransmitter.vhd              &                                          & 潘传宇 \\ \hline
+    mTXD.vhd                      &                                          & 潘传宇 \\ \hline
+    mw8731\_controller.vhd        & 处理ADCDAT，配置WM8731芯片寄存器                & 任一*  \\ \hline
+    mypll.vhd                     & 时钟分频，由100MHz转换为50MHz                     & 任一*  \\ \hline
+    top.vhd                       & 顶层模块，连接音频处理和灯光信息传输模块 & 任一  \\ \hline
+    trans\_pkg.vhd                &                                          & 潘传宇 \\ \hline
+    \end{tabular}
+    \caption{项目文件说明}
+    \end{table}
 \section{总体设计}
 \subsection{整体框架}
 \paragraph{}本项目设计的整体框架如Figure\eqref{structure}所示。 
 整个工程的输入为3.5mm的音频线，输入的是模拟信号。经过AN831模块中的WM8731芯片的模数转换，
 得到24位的数字信号。数字信号输入FPGA后，由FPGA做FFT和数据的打包处理，由RX/TX串口将灯光信号
 发送给光立方，光立方产生显示效果。
-
-
 
 
 \begin{figure}[h]

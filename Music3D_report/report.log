@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.30)  17 JUN 2020 10:24
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.30)  17 JUN 2020 10:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -442,6 +442,9 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \diagbox@insepr=\dimen188
 \diagbox@outsepl=\dimen189
 \diagbox@outsepr=\dimen190
+) (d:/Programs/texlive/2019/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 
 Package xeCJK Warning: Fandol is being set as the default font for CJK text.
@@ -556,22 +559,58 @@ Overfull \hbox (31.20001pt too wide) in paragraph at lines 34--53
 [3]
 File: pic/show1.png Graphic file (type bmp)
 <pic/show1.png>
- [4]
+
+
+Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
+(fontspec)             'FandolFang-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolFang-Regular.otf]/OT"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Overfull \hbox (67.61203pt too wide) in paragraph at lines 79--98
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
 File: ./pic/structure.png Graphic file (type bmp)
 <./pic/structure.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: ./pic/Design.png Graphic file (type bmp)
 <./pic/Design.png>
- [5]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5]
 File: ./pic/ProjectWork.png Graphic file (type bmp)
 <./pic/ProjectWork.png>
- [6] [7] [8] (./report.aux) ) 
-Here is how much of TeX's memory you used:
- 15527 strings out of 492909
- 348210 string characters out of 6132501
- 444007 words of memory out of 5000000
- 19468 multiletter control sequences out of 15000+600000
- 537288 words of font info for 63 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 44i,6n,64p,432b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (8 pages).
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6] [7] [8] [9] (./report.aux) ) 
+Here is how much of TeX's memory you used:
+ 15644 strings out of 492909
+ 351258 string characters out of 6132501
+ 448150 words of memory out of 5000000
+ 19570 multiletter control sequences out of 15000+600000
+ 537563 words of font info for 70 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 48i,8n,73p,432b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on report.pdf (9 pages).
