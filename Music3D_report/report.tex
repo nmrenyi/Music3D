@@ -75,12 +75,58 @@
 
 \section{文件说明}
 \section{总体设计}
+\subsection{整体框架}
+\paragraph{}本项目设计的整体框架如Figure\eqref{structure}所示。 
+整个工程的输入为3.5mm的音频线，输入的是模拟信号。经过AN831模块中的WM8731芯片的模数转换，
+得到24位的数字信号。数字信号输入FPGA后，由FPGA做FFT和数据的打包处理，由RX/TX串口将灯光信号
+发送给光立方，光立方产生显示效果。
+
+
+
+
+\begin{figure}[h]
+    \centering
+    \label{structure}
+        \includegraphics[width=0.8\textwidth]{./pic/structure.png}
+        \caption{整体框架图}
+\end{figure}
+
+
+\subsection{FPGA设计概要}
+\paragraph{}
+FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收了AN831模块输出的时域数字串行信号，并将其转为并行，
+之后进行FFT，得到频域信号，由频域信号再转为灯光信息。
+接着将灯光信息进行存储和整合，最后由UART串口输出给光立方。
+
+\begin{figure}[h]
+    \centering
+    \label{Design}
+        \includegraphics[width=0.8\textwidth]{./pic/Design.png}
+        \caption{FPGA设计概要图}
+\end{figure}
+
+
+\subsection{光立方工作原理}
+\paragraph{}
+光立方的工作原理示意如Figure\eqref{cube}所示。
+光立方是三维的显示，三个维度分别是时间、频率和强度。
+随着时间的推移，光立方的显示沿着时间轴队列式逐层后移。
+从频率-强度平面来看，光立方的8列分别代表8个频率分量的强度。
+亮灯多的列对应的频率分量强度大，亮灯少的列对应的频率分量强度小。
+同时，音量的大小也与强度有一定正相关关系，音量大则强度大，音量小则强度小。
+
+\begin{figure}[h]
+    \centering
+    \label{cube}
+        \includegraphics[width=0.8\textwidth]{./pic/ProjectWork.png}
+        \caption{光立方工作原理示意图}
+\end{figure}
 
 
 \section{关键技术分析}
 \subsection{Fast Fourier Transformation}
 \paragraph{}为了从时域信号中提取频域信息，我们需要使用快速傅里叶变换(FFT)。在本代码中，我们配置WM8731芯片的采样频率为8KHz, 进行64点的FFT，得到了125Hz, 250Hz, 375Hz, 500Hz, 625Hz, 750Hz, 875Hz, 1000Hz
-这8个频率处的频谱分量，正好对应光立方每一帧的8列灯光信息。为了节约计算成本，我们在进行FFT时，提前通过定点数的方式，储存了旋转因子。
+这8个频率处的频谱分量，正好对应光立方每一帧的8列灯光信息。为了节约计算成本，我们在进行FFT时，通过定点数的方式，提前储存了旋转因子。
 
 \subsection{串口协议通信}
 \paragraph{}通过UART串口传送串行信号，可以将设计好的灯光信息传给光立方模块上的单片机（相当于下位机），并由单片机控制灯的亮灭。
@@ -97,6 +143,18 @@
 \section{程序注释}
 \section{波形仿真结果说明}
 \section{遇到问题与解决方法}
+\subsection{FPGA逻辑资源不足}
+\paragraph{}在最初的项目调试中，我们希望做到的是采样频率48kHz的1024点FFT。这样做存在的问题是，
+由于FFT涉及到大量的乘法，导致板子的逻辑资源严重不足。
+
+因此我们从两方面进行改进，一方面是降低FFT点数，从1024点降低到64点，使得计算复杂度降低，同时我们也降采样频率
+由48kHz降低到8kHz，从而保证FFT得到的每两点之间的频率差不会过大。另一方面，我们降低了旋转因子定点数的位数，从
+原项目的16bit旋转因子降低到14bit旋转因子，进一步降低了计算的复杂度。通过这两方面的改进，我们成功实现了采样频率为8kHz下，64点的FFT.
+
+其他可能的改进思路还有降低采样深度(既bits per sample). 这样做的原理与降低旋转因子的位数相似，都能够降低FFT中乘法的资源使用。
+但由于本项目使用的是WM8731的DSP模式传输数据，在DSP模式下WM8731模块仅支持24bit的采样深度，因此我们最终没有采用这种优化方案。此外，也可以
+考虑从FFT的算法本身进行改进，例如利用移位代替乘除法等方法，降低硬件逻辑资源使用率。
+
 \section{实验总结}
 
 \end{document}
