@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.30)  17 JUN 2020 10:51
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.30)  17 JUN 2020 11:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -577,40 +577,32 @@ Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 
-Overfull \hbox (67.61203pt too wide) in paragraph at lines 79--98
-[][] 
- []
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4]
 File: ./pic/structure.png Graphic file (type bmp)
 <./pic/structure.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ [5]
 File: ./pic/Design.png Graphic file (type bmp)
 <./pic/Design.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5]
 File: ./pic/ProjectWork.png Graphic file (type bmp)
 <./pic/ProjectWork.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6] [7] [8] [9] (./report.aux) ) 
+[6] [7] [8] [9] (./report.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  15644 strings out of 492909
  351258 string characters out of 6132501
- 448150 words of memory out of 5000000
+ 449150 words of memory out of 5000000
  19570 multiletter control sequences out of 15000+600000
  537563 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 48i,8n,73p,432b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,9n,73p,432b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on report.pdf (9 pages).

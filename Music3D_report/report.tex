@@ -76,6 +76,8 @@
 \section{文件说明}
 本项目文件说明如下表：\footnote{完成者中带*对应的文件，参考了\url{https://github.com/Ugon/fpga-fft-equalizer}或直接使用Altera中的PLL，并非完全独立实现。}
 \begin{table}[h]
+    \centering
+    \resizebox{\textwidth}{!}{
     \begin{tabular}{|l|l|l|}
     \hline
     文件名                           & 功能                                       & 完成者 \\ \hline
@@ -92,9 +94,9 @@
     mTXD.vhd                      &                                          & 潘传宇 \\ \hline
     mw8731\_controller.vhd        & 处理ADCDAT，配置WM8731芯片寄存器                & 任一*  \\ \hline
     mypll.vhd                     & 时钟分频，由100MHz转换为50MHz                     & 任一*  \\ \hline
-    top.vhd                       & 顶层模块，连接音频处理和灯光信息传输模块 & 任一  \\ \hline
+    top.vhd                       & 顶层模块，连接音频处理和灯光信息传输模块 & 任一、潘传宇  \\ \hline
     trans\_pkg.vhd                &                                          & 潘传宇 \\ \hline
-    \end{tabular}
+    \end{tabular}}
     \caption{项目文件说明}
     \end{table}
 \section{总体设计}
