@@ -1,7 +1,7 @@
 -----------------------------------------------------------
 --
 -- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
---
+-- Referenced to https://github.com/Ugon/fpga-fft-equalizer
 -----------------------------------------------------------
 -- mw8731_controller.vhd
 -- create time: 2020-05-01
@@ -211,7 +211,7 @@ begin
 				when reg0000111 =>                               --Digital Audio Interface Format
 					if(i2c_transmission_ongoing = '1') then
 						i2c_transmission_start <= '0';
-					else  -- TODO DSP MODE???
+					else
 						i2c_byte1 <= "00001110";
 						i2c_byte2 <= "01011011";                 --24 bit samples
 						i2c_transmission_start <= '1';

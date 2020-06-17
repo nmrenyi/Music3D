@@ -14,8 +14,8 @@
 -- main signal:
 --             Input:      iCLK_100    | System clock at 100 MHz
 --                         iCLK_11MHz  | System clock at 11 MHz
---                         Mode        | Audio CODEC Bit-Stream Clock
---                         AUD_BCLK    | Input command : Input data valid
+--                         Mode        | Mode Selection
+--                         AUD_BCLK    | Audio CODEC Bit-Stream Clock (frequency = 2 * Fs * bits_per_sample)
 --                         AUD_ADCLRCK | Audio CODEC ADC LR Clock
 --                         iAUD_ADCDAT | Audio CODEC ADC Data
 --

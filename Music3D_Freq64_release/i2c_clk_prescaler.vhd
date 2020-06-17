@@ -1,3 +1,21 @@
+-----------------------------------------------------------
+--
+-- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
+-- Referenced to https://github.com/Ugon/fpga-fft-equalizer
+-----------------------------------------------------------
+-- i2c_clk_prescaler.vhd
+-- create time: 2020-05-01
+-- target chip: EP2C70F672C8
+-- clock selection: clk_50MHz = 50MHz
+-- main signal:
+--             Input:      clk_50MHz   | System clock at 50 MHz
+--
+--             Output:     clk_100kHz  		| 100kHz clock
+-- main function: Convert 50MHz clock to 100kHz clock.
+-----------------------------------------------------------
+
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 

@@ -1,3 +1,21 @@
+-----------------------------------------------------------
+--
+-- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
+-- Referenced to https://github.com/Ugon/fpga-fft-equalizer
+-----------------------------------------------------------
+-- fft_dif.vhd
+-- create time: 2020-05-01
+-- target chip: EP2C70F672C8
+-- main signal:
+--             Input:      input_re   | real part of input data
+--             		       input_im   | imaginary part of input data
+
+--
+--             Output:     output_re   | real part of output data
+--						   output_im   | imaginary part of output data
+-- main function: A recursive FFT implementation.
+-----------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -45,13 +63,15 @@ architecture fft_dif_impl of fft_dif is
 	signal joined_im:        std_logic_vector(2**fft_size_exp * (bits_per_sample + fft_size_exp) - 1 downto 0);
 
 begin
+	-- Recursive end
 	edge_case: if fft_size_exp = 0 generate
 	
 		output_re <= input_re;
 		output_im <= input_im;
 	
 	end generate edge_case;
-
+	
+	-- Go recursive
 	general: if fft_size_exp > 0 generate
 
 		process(input_re, input_im)

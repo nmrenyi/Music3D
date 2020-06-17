@@ -1,3 +1,19 @@
+-----------------------------------------------------------
+--
+-- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
+-- Referenced to https://github.com/Ugon/fpga-fft-equalizer
+-----------------------------------------------------------
+-- fft_input_deserializer.vhd
+-- create time: 2020-05-01
+-- target chip: EP2C70F672C8
+-- main signal:
+--             Input:      All input signal have been stated in upper level.
+--
+--             Output:     vector_left / vector_right   | left / right channel audio data ready for FFT
+--						   new_vector                   | new vector ready signal
+-- main function: Prepare number_of_samples points of data for FFT
+-----------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

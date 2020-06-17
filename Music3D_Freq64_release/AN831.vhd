@@ -9,7 +9,7 @@
 -- clock selection: iCLK_100 = 100MHz
 -- main signal:
 --             Input:      iCLK_100    | System clock at 100 MHz
---                         AUD_BCLK    | Input command : Input data valid
+--                         AUD_BCLK    | Audio CODEC Bit-Stream Clock
 --                         AUD_ADCLRCK | Audio CODEC ADC LR Clock
 --                         iAUD_ADCDAT | Audio CODEC ADC Data
 --
@@ -365,6 +365,7 @@ entity send is
 	);
 end send;
 
+-- convert 8 signals to 1 signal.
 architecture send_impl of send is 
 signal tmp: std_logic_vector(63 downto 0) := (others => '0');
 	begin

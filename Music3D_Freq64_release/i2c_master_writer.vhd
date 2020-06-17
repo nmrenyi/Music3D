@@ -1,3 +1,22 @@
+-----------------------------------------------------------
+--
+-- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
+-- Referenced to https://github.com/Ugon/fpga-fft-equalizer
+-----------------------------------------------------------
+-- i2c_master_writer.vhd
+-- create time: 2020-05-01
+-- target chip: EP2C70F672C8
+-- clock selection: clk = 100kHz
+-- main signal:
+--             Input:      clk     | System clock at 100kHz
+--						   address | initial address for registers
+--						   byte1   | register index
+-- 						   byte2   | register value
+--             Output:     i2c_sdat, i2c_sclk  | config register
+-- main function: Config WM8731 registers.
+-----------------------------------------------------------
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
