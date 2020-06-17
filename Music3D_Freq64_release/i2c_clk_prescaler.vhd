@@ -9,7 +9,6 @@
 -- clock selection: clk_50MHz = 50MHz
 -- main signal:
 --             Input:      clk_50MHz   | System clock at 50 MHz
---
 --             Output:     clk_100kHz  		| 100kHz clock
 -- main function: Convert 50MHz clock to 100kHz clock.
 -----------------------------------------------------------

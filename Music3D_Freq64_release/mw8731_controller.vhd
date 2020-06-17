@@ -8,7 +8,7 @@
 -- target chip: EP2C70F672C8
 -- clock selection: clk_50MHz = 50MHz
 -- main signal:
---             Input:      clk_50MHz   | System clock at 50 MHz
+--             Input:      Main input signals have been stated in upper level.
 --
 --             Output:     left_channel_sample_from_adc  		| left channel audio data (two's complement code)
 --						   right_channel_sample_from_adc 		| right channel audio data (two's complement code)

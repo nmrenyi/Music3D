@@ -3,12 +3,14 @@
 -- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
 -- Referenced to https://github.com/Ugon/fpga-fft-equalizer
 -----------------------------------------------------------
--- mw8731_controller.vhd
+-- audio_processor.vhd
 -- create time: 2020-05-01
 -- target chip: EP2C70F672C8
 -- main signal:
---             Input:      clk_50MHz   | System clock at 50 MHz
---
+--             Input:      left_channel_sample_from_adc  		| left channel audio data (two's complement code)
+--						   right_channel_sample_from_adc 		| right channel audio data (two's complement code)
+--                         sample_available_from_adc    		| audio sample data ready
+
 --             Output:     left_channel_sample_from_adc  		| left channel audio data (two's complement code)
 --						   right_channel_sample_from_adc 		| right channel audio data (two's complement code)
 --                         sample_available_from_adc    		| audio sample data ready
@@ -19,7 +21,6 @@
 --						   mask/bin_0                           | not used in current project
 -- main process: FFT_LEFT                   : Left channel FFT
 --               FFT_RIGHT                  : Right channel FFT
---				 DSP_SLAVE_READER_INSTANCE  : read audio data from WM8731
 -- 				 FFT_INPUT_FORMER1          : prepare 2^fft_size_exp points data for FFT
 -- main function: Do FFT from digital data.
 -----------------------------------------------------------

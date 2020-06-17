@@ -9,7 +9,6 @@
 -- main signal:
 --             Input:      input_re   | real part of input data
 --             		       input_im   | imaginary part of input data
-
 --
 --             Output:     output_re   | real part of output data
 --						   output_im   | imaginary part of output data

@@ -7,7 +7,7 @@
 -- create time: 2020-05-01
 -- target chip: EP2C70F672C8
 -- main signal:
---             Input:      All input signal have been stated in upper level.
+--             Input:      All input signal have been stated in upper level(audio_processor.vhd).
 --
 --             Output:     vector_left / vector_right   | left / right channel audio data ready for FFT
 --						   new_vector                   | new vector ready signal

@@ -1,3 +1,14 @@
+-----------------------------------------------------------
+--
+-- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
+-- Referenced to https://github.com/Ugon/fpga-fft-equalizer
+-----------------------------------------------------------
+-- fft_utils.vhd
+-- create time: 2020-05-01
+-- target chip: EP2C70F672C8
+-- main function: functions used in the project.
+-----------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

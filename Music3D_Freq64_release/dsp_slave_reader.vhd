@@ -6,7 +6,6 @@
 -- dsp_slave_reader.vhd
 -- create time: 2020-05-01
 -- target chip: EP2C70F672C8
--- clock selection: clk_50MHz = 50MHz
 -- main signal:  all have been stated in mw8731_controller.vhd
 -- main function: Convert sequential digital signal(adcdat) to parallel digital signal(left_channel_sample_from_adc/right_channel_sample_from_adc).
 -----------------------------------------------------------
