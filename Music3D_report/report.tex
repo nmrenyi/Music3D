@@ -90,12 +90,12 @@
     fft\_utils.vhd                & FFT计算中用到的函数                              & 任一*  \\ \hline
     i2c\_clk\_prescaler.vhd       & 时钟分频，由50MHz转换为100kHz                     & 任一* \\ \hline
     i2c\_master\_writer.vhd       & 配置WM8731芯片寄存器                            & 任一*  \\ \hline
-    mTransmitter.vhd              &                                          & 潘传宇 \\ \hline
-    mTXD.vhd                      &                                          & 潘传宇 \\ \hline
+    mTransmitter.vhd              & 接受频域采样信息，转化为灯光信息并存储移位与整合输出                                         & 潘传宇 \\ \hline
+    mTXD.vhd                      & 并行信号转UART串口输出                                         & 潘传宇 \\ \hline
     mw8731\_controller.vhd        & 处理ADCDAT，配置WM8731芯片寄存器                & 任一*  \\ \hline
     mypll.vhd                     & 时钟分频，由100MHz转换为50MHz                     & 任一*  \\ \hline
     top.vhd                       & 顶层模块，连接音频处理和灯光信息传输模块 & 任一、潘传宇  \\ \hline
-    trans\_pkg.vhd                &                                          & 潘传宇 \\ \hline
+    trans\_pkg.vhd                & 定义若干新数据类型                                         & 潘传宇 \\ \hline
     \end{tabular}}
     \caption{项目文件说明}
     \end{table}
@@ -129,7 +129,7 @@ FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收�
 \end{figure}
 
 
-\subsection{光立方工作原理}
+\subsection{光立方工作示意}
 \paragraph{}
 光立方的工作原理示意如Figure\eqref{cube}所示。
 光立方是三维的显示，三个维度分别是时间、频率和强度。
@@ -141,7 +141,7 @@ FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收�
 \begin{figure}[h]
     \centering
     \label{cube}
-        \includegraphics[width=0.8\textwidth]{./pic/ProjectWork.png}
+        \includegraphics[width=0.74\textwidth]{./pic/ProjectWork.png}
         \caption{光立方工作原理示意图}
 \end{figure}
 
@@ -172,16 +172,21 @@ FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收�
 
 因此我们从两方面进行改进，一方面是降低FFT点数，从1024点降低到64点，使得计算复杂度降低，同时我们也降采样频率
 由48kHz降低到8kHz，从而保证FFT得到的每两点之间的频率差不会过大。另一方面，我们降低了旋转因子定点数的位数，从
-原项目的16bit旋转因子降低到14bit旋转因子，进一步降低了计算的复杂度。通过这两方面的改进，我们成功实现了采样频率为8kHz下，64点的FFT.
+原项目的16bit旋转因子降低到14bit旋转因子，进一步降低了计算的复杂度。通过这两方面的改进，我们成功实现了采样频率为8kHz下，64点的FFT。
 
 其他可能的改进思路还有降低采样深度(即bits per sample). 这样做的原理与降低旋转因子的位数相似，都能够降低FFT中乘法的资源使用。
 但由于本项目使用的是WM8731的DSP模式传输数据，在DSP模式下WM8731模块仅支持24bit的采样深度，因此我们最终没有采用这种优化方案。此外，也可以
 考虑从FFT的算法本身进行改进，例如利用移位代替乘除法等方法，降低硬件逻辑资源使用率。
 
 \subsection{时序问题}
-在编译时，我曾遇到Critical Warning(332148): Timing requirements not met. 这样的问题。
-经过与助教讨论，我意识到这是时序出现了问题。
+\paragraph{}在编译时，我们曾遇到Critical Warning(332148): Timing requirements not met. 这样的问题。
+经过与助教讨论，我们意识到这是时序出现了问题。
 经过对项目中使用的时钟加入限制后，再次编译基本解决了这个问题。
+
+\subsection{一些硬件调试的问题}
+\paragraph{}最早使用AN831模块时没有反应，且伴有发热现象，经错误检查后发现正负极接反；通常来说外设板上不会显式标注正负极，需要自己判断；一个比较好的判断方法是看焊盘，方形一般为“地”。
+\paragraph{}在串口连线时，TX需与RX连接、RX需与TX连接，最早调试光立方时出错检查了很长时间。
+\paragraph{}实验中还出现过AN831模块无法正常传输信号的情况，经检查发现为实验板的5V电源供电不稳定。通过重新烧录程序或者更换新的电源能够解决问题。
 
 \section{实验总结}
 
