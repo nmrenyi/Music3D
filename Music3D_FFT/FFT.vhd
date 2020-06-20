@@ -10,7 +10,7 @@ entity FFT is
 	generic(
 		stages_done:                  integer := 1;
 		fft_size_exp:                 integer := 3;
-		bits_per_sample:              integer := 16;
+		bits_per_sample:              integer := 8;
 		output_natural_order:         boolean := true);
 	port(
 		input_re:   in  std_logic_vector(2**fft_size_exp * bits_per_sample - 1 downto 0);

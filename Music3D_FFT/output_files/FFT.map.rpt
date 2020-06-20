@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Wed Jun 17 14:31:20 2020
+Fri Jun 19 08:30:50 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,32 +13,31 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |FFT
- 11. Parameter Settings for User Entity Instance: FFT:\general:fft1
- 12. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft1
- 13. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft1|FFT:\general:fft1
- 14. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft1|FFT:\general:fft0
- 15. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft0
- 16. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft0|FFT:\general:fft1
- 17. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft0|FFT:\general:fft0
- 18. Parameter Settings for User Entity Instance: FFT:\general:fft0
- 19. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft1
- 20. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft1|FFT:\general:fft1
- 21. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft1|FFT:\general:fft0
- 22. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft0
- 23. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft0|FFT:\general:fft1
- 24. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft0|FFT:\general:fft0
- 25. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
- 26. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 27. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult5
- 28. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult4
- 29. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult3
- 30. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult2
- 31. lpm_mult Parameter Settings by Entity Instance
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |FFT
+ 10. Parameter Settings for User Entity Instance: FFT:\general:fft1
+ 11. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft1
+ 12. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft1|FFT:\general:fft1
+ 13. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft1|FFT:\general:fft0
+ 14. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft0
+ 15. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft0|FFT:\general:fft1
+ 16. Parameter Settings for User Entity Instance: FFT:\general:fft1|FFT:\general:fft0|FFT:\general:fft0
+ 17. Parameter Settings for User Entity Instance: FFT:\general:fft0
+ 18. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft1
+ 19. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft1|FFT:\general:fft1
+ 20. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft1|FFT:\general:fft0
+ 21. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft0
+ 22. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft0|FFT:\general:fft1
+ 23. Parameter Settings for User Entity Instance: FFT:\general:fft0|FFT:\general:fft0|FFT:\general:fft0
+ 24. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult5
+ 25. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult4
+ 26. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
+ 27. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 28. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult3
+ 29. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult2
+ 30. lpm_mult Parameter Settings by Entity Instance
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -64,19 +63,19 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 17 14:31:20 2020           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 19 08:30:50 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; FFT                                             ;
 ; Top-level Entity Name              ; FFT                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1,197                                           ;
-;     Total combinational functions  ; 1,197                                           ;
+; Total logic elements               ; 997                                             ;
+;     Total combinational functions  ; 997                                             ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 560                                             ;
+; Total pins                         ; 304                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 12                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
@@ -197,84 +196,118 @@ applicable agreement for further details.
 ; multcore.inc                     ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc                           ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                           ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                           ;         ;
-; db/mult_75t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_FFT/db/mult_75t.tdf            ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/multcore.tdf                           ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/csa_add.inc                            ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.inc                           ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/muleabz.inc                            ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/mul_lfrg.inc                           ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/mul_boothc.inc                         ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult.inc                       ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                     ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/dffpipe.inc                            ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.tdf                           ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf                        ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc                            ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc                           ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                ;         ;
+; db/add_sub_v4h.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_FFT/db/add_sub_v4h.tdf         ;         ;
+; db/add_sub_tfh.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Tsinghua/2020Spring/DigitalLogicDesign/LightCube/MyCode/Music3D_FFT/db/add_sub_tfh.tdf         ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; d:/programs/altera/13.0sp1/quartus/libraries/megafunctions/altshift.tdf                           ;         ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                   ;
-+---------------------------------------------+-------------------------------------------------+
-; Resource                                    ; Usage                                           ;
-+---------------------------------------------+-------------------------------------------------+
-; Estimated Total logic elements              ; 1,197                                           ;
-;                                             ;                                                 ;
-; Total combinational functions               ; 1197                                            ;
-; Logic element usage by number of LUT inputs ;                                                 ;
-;     -- 4 input functions                    ; 0                                               ;
-;     -- 3 input functions                    ; 986                                             ;
-;     -- <=2 input functions                  ; 211                                             ;
-;                                             ;                                                 ;
-; Logic elements by mode                      ;                                                 ;
-;     -- normal mode                          ; 67                                              ;
-;     -- arithmetic mode                      ; 1130                                            ;
-;                                             ;                                                 ;
-; Total registers                             ; 0                                               ;
-;     -- Dedicated logic registers            ; 0                                               ;
-;     -- I/O registers                        ; 0                                               ;
-;                                             ;                                                 ;
-; I/O pins                                    ; 560                                             ;
-; Embedded Multiplier 9-bit elements          ; 12                                              ;
-; Maximum fan-out node                        ; lpm_mult:Mult5|mult_75t:auto_generated|mac_out2 ;
-; Maximum fan-out                             ; 34                                              ;
-; Total fan-out                               ; 3783                                            ;
-; Average fan-out                             ; 2.14                                            ;
-+---------------------------------------------+-------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                    ;
++---------------------------------------------+----------------------------------+
+; Resource                                    ; Usage                            ;
++---------------------------------------------+----------------------------------+
+; Estimated Total logic elements              ; 997                              ;
+;                                             ;                                  ;
+; Total combinational functions               ; 997                              ;
+; Logic element usage by number of LUT inputs ;                                  ;
+;     -- 4 input functions                    ; 102                              ;
+;     -- 3 input functions                    ; 662                              ;
+;     -- <=2 input functions                  ; 233                              ;
+;                                             ;                                  ;
+; Logic elements by mode                      ;                                  ;
+;     -- normal mode                          ; 209                              ;
+;     -- arithmetic mode                      ; 788                              ;
+;                                             ;                                  ;
+; Total registers                             ; 0                                ;
+;     -- Dedicated logic registers            ; 0                                ;
+;     -- I/O registers                        ; 0                                ;
+;                                             ;                                  ;
+; I/O pins                                    ; 304                              ;
+; Embedded Multiplier 9-bit elements          ; 0                                ;
+; Maximum fan-out node                        ; \general:summed_array_im[7][4]~0 ;
+; Maximum fan-out                             ; 25                               ;
+; Total fan-out                               ; 3017                             ;
+; Average fan-out                             ; 2.32                             ;
++---------------------------------------------+----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
-; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
-; |FFT                            ; 1197 (425)        ; 0 (0)        ; 0           ; 12           ; 0       ; 6         ; 560  ; 0            ; |FFT                                        ; work         ;
-;    |FFT:\general:fft0|          ; 386 (234)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft0                      ; work         ;
-;       |FFT:\general:fft0|       ; 76 (76)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft0|FFT:\general:fft0    ; work         ;
-;       |FFT:\general:fft1|       ; 76 (76)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft0|FFT:\general:fft1    ; work         ;
-;    |FFT:\general:fft1|          ; 386 (234)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft1                      ; work         ;
-;       |FFT:\general:fft0|       ; 76 (76)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft1|FFT:\general:fft0    ; work         ;
-;       |FFT:\general:fft1|       ; 76 (76)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft1|FFT:\general:fft1    ; work         ;
-;    |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult0                         ; work         ;
-;       |mult_75t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult0|mult_75t:auto_generated ; work         ;
-;    |lpm_mult:Mult1|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult1                         ; work         ;
-;       |mult_75t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult1|mult_75t:auto_generated ; work         ;
-;    |lpm_mult:Mult2|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult2                         ; work         ;
-;       |mult_75t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult2|mult_75t:auto_generated ; work         ;
-;    |lpm_mult:Mult3|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult3                         ; work         ;
-;       |mult_75t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult3|mult_75t:auto_generated ; work         ;
-;    |lpm_mult:Mult4|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult4                         ; work         ;
-;       |mult_75t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult4|mult_75t:auto_generated ; work         ;
-;    |lpm_mult:Mult5|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult5                         ; work         ;
-;       |mult_75t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |FFT|lpm_mult:Mult5|mult_75t:auto_generated ; work         ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
++------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
++------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; |FFT                                           ; 997 (229)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 304  ; 0            ; |FFT                                                                                                                        ; work         ;
+;    |FFT:\general:fft0|                         ; 218 (130)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft0                                                                                                      ; work         ;
+;       |FFT:\general:fft0|                      ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft0|FFT:\general:fft0                                                                                    ; work         ;
+;       |FFT:\general:fft1|                      ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft0|FFT:\general:fft1                                                                                    ; work         ;
+;    |FFT:\general:fft1|                         ; 220 (132)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft1                                                                                                      ; work         ;
+;       |FFT:\general:fft0|                      ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft1|FFT:\general:fft0                                                                                    ; work         ;
+;       |FFT:\general:fft1|                      ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|FFT:\general:fft1|FFT:\general:fft1                                                                                    ; work         ;
+;    |lpm_mult:Mult0|                            ; 64 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult0                                                                                                         ; work         ;
+;       |multcore:mult_core|                     ; 64 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
+;          |mpar_add:padder|                     ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                |add_sub_v4h:auto_generated|    ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_v4h:auto_generated                      ; work         ;
+;             |mpar_add:sub_par_add|             ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
+;                   |add_sub_tfh:auto_generated| ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_tfh:auto_generated ; work         ;
+;    |lpm_mult:Mult1|                            ; 55 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult1                                                                                                         ; work         ;
+;       |multcore:mult_core|                     ; 55 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult1|multcore:mult_core                                                                                      ; work         ;
+;          |mpar_add:padder|                     ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                |add_sub_v4h:auto_generated|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_v4h:auto_generated                      ; work         ;
+;             |mpar_add:sub_par_add|             ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
+;                   |add_sub_tfh:auto_generated| ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_tfh:auto_generated ; work         ;
+;    |lpm_mult:Mult2|                            ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult2                                                                                                         ; work         ;
+;       |multcore:mult_core|                     ; 48 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult2|multcore:mult_core                                                                                      ; work         ;
+;          |mpar_add:padder|                     ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                |add_sub_v4h:auto_generated|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_v4h:auto_generated                      ; work         ;
+;             |mpar_add:sub_par_add|             ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
+;                   |add_sub_tfh:auto_generated| ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_tfh:auto_generated ; work         ;
+;    |lpm_mult:Mult3|                            ; 57 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult3                                                                                                         ; work         ;
+;       |multcore:mult_core|                     ; 57 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult3|multcore:mult_core                                                                                      ; work         ;
+;          |mpar_add:padder|                     ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                |add_sub_v4h:auto_generated|    ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_v4h:auto_generated                      ; work         ;
+;             |mpar_add:sub_par_add|             ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
+;                   |add_sub_tfh:auto_generated| ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_tfh:auto_generated ; work         ;
+;    |lpm_mult:Mult4|                            ; 53 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult4                                                                                                         ; work         ;
+;       |multcore:mult_core|                     ; 53 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult4|multcore:mult_core                                                                                      ; work         ;
+;          |mpar_add:padder|                     ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                |add_sub_v4h:auto_generated|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_v4h:auto_generated                      ; work         ;
+;             |mpar_add:sub_par_add|             ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
+;                   |add_sub_tfh:auto_generated| ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_tfh:auto_generated ; work         ;
+;    |lpm_mult:Mult5|                            ; 53 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult5                                                                                                         ; work         ;
+;       |multcore:mult_core|                     ; 53 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult5|multcore:mult_core                                                                                      ; work         ;
+;          |mpar_add:padder|                     ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                |add_sub_v4h:auto_generated|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_v4h:auto_generated                      ; work         ;
+;             |mpar_add:sub_par_add|             ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
+;                   |add_sub_tfh:auto_generated| ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FFT|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_tfh:auto_generated ; work         ;
++------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary        ;
-+---------------------------------------+-------------+
-; Statistic                             ; Number Used ;
-+---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 6           ;
-; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 12          ;
-; Signed Embedded Multipliers           ; 6           ;
-; Unsigned Embedded Multipliers         ; 0           ;
-; Mixed Sign Embedded Multipliers       ; 0           ;
-; Variable Sign Embedded Multipliers    ; 0           ;
-; Dedicated Input Shift Register Chains ; 0           ;
-+---------------------------------------+-------------+
-Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 +------------------------------------------------------+
@@ -299,7 +332,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------+-------+--------------------------------------+
 ; stages_done          ; 1     ; Signed Integer                       ;
 ; fft_size_exp         ; 3     ; Signed Integer                       ;
-; bits_per_sample      ; 16    ; Signed Integer                       ;
+; bits_per_sample      ; 8     ; Signed Integer                       ;
 ; output_natural_order ; true  ; Enumerated                           ;
 +----------------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -312,7 +345,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------+
 ; stages_done          ; 2     ; Signed Integer                  ;
 ; fft_size_exp         ; 2     ; Signed Integer                  ;
-; bits_per_sample      ; 17    ; Signed Integer                  ;
+; bits_per_sample      ; 9     ; Signed Integer                  ;
 ; output_natural_order ; false ; Enumerated                      ;
 +----------------------+-------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -325,7 +358,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------+
 ; stages_done          ; 3     ; Signed Integer                                    ;
 ; fft_size_exp         ; 1     ; Signed Integer                                    ;
-; bits_per_sample      ; 18    ; Signed Integer                                    ;
+; bits_per_sample      ; 10    ; Signed Integer                                    ;
 ; output_natural_order ; false ; Enumerated                                        ;
 +----------------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -338,7 +371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------------------------+
 ; stages_done          ; 4     ; Signed Integer                                                      ;
 ; fft_size_exp         ; 0     ; Signed Integer                                                      ;
-; bits_per_sample      ; 19    ; Signed Integer                                                      ;
+; bits_per_sample      ; 11    ; Signed Integer                                                      ;
 ; output_natural_order ; false ; Enumerated                                                          ;
 +----------------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -351,7 +384,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------------------------+
 ; stages_done          ; 4     ; Signed Integer                                                      ;
 ; fft_size_exp         ; 0     ; Signed Integer                                                      ;
-; bits_per_sample      ; 19    ; Signed Integer                                                      ;
+; bits_per_sample      ; 11    ; Signed Integer                                                      ;
 ; output_natural_order ; false ; Enumerated                                                          ;
 +----------------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -364,7 +397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------+
 ; stages_done          ; 3     ; Signed Integer                                    ;
 ; fft_size_exp         ; 1     ; Signed Integer                                    ;
-; bits_per_sample      ; 18    ; Signed Integer                                    ;
+; bits_per_sample      ; 10    ; Signed Integer                                    ;
 ; output_natural_order ; false ; Enumerated                                        ;
 +----------------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -377,7 +410,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------------------------+
 ; stages_done          ; 4     ; Signed Integer                                                      ;
 ; fft_size_exp         ; 0     ; Signed Integer                                                      ;
-; bits_per_sample      ; 19    ; Signed Integer                                                      ;
+; bits_per_sample      ; 11    ; Signed Integer                                                      ;
 ; output_natural_order ; false ; Enumerated                                                          ;
 +----------------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -390,7 +423,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------------------------+
 ; stages_done          ; 4     ; Signed Integer                                                      ;
 ; fft_size_exp         ; 0     ; Signed Integer                                                      ;
-; bits_per_sample      ; 19    ; Signed Integer                                                      ;
+; bits_per_sample      ; 11    ; Signed Integer                                                      ;
 ; output_natural_order ; false ; Enumerated                                                          ;
 +----------------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -403,7 +436,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------+
 ; stages_done          ; 2     ; Signed Integer                  ;
 ; fft_size_exp         ; 2     ; Signed Integer                  ;
-; bits_per_sample      ; 17    ; Signed Integer                  ;
+; bits_per_sample      ; 9     ; Signed Integer                  ;
 ; output_natural_order ; false ; Enumerated                      ;
 +----------------------+-------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -416,7 +449,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------+
 ; stages_done          ; 3     ; Signed Integer                                    ;
 ; fft_size_exp         ; 1     ; Signed Integer                                    ;
-; bits_per_sample      ; 18    ; Signed Integer                                    ;
+; bits_per_sample      ; 10    ; Signed Integer                                    ;
 ; output_natural_order ; false ; Enumerated                                        ;
 +----------------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -429,7 +462,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------------------------+
 ; stages_done          ; 4     ; Signed Integer                                                      ;
 ; fft_size_exp         ; 0     ; Signed Integer                                                      ;
-; bits_per_sample      ; 19    ; Signed Integer                                                      ;
+; bits_per_sample      ; 11    ; Signed Integer                                                      ;
 ; output_natural_order ; false ; Enumerated                                                          ;
 +----------------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -442,7 +475,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------------------------+
 ; stages_done          ; 4     ; Signed Integer                                                      ;
 ; fft_size_exp         ; 0     ; Signed Integer                                                      ;
-; bits_per_sample      ; 19    ; Signed Integer                                                      ;
+; bits_per_sample      ; 11    ; Signed Integer                                                      ;
 ; output_natural_order ; false ; Enumerated                                                          ;
 +----------------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -455,7 +488,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------+
 ; stages_done          ; 3     ; Signed Integer                                    ;
 ; fft_size_exp         ; 1     ; Signed Integer                                    ;
-; bits_per_sample      ; 18    ; Signed Integer                                    ;
+; bits_per_sample      ; 10    ; Signed Integer                                    ;
 ; output_natural_order ; false ; Enumerated                                        ;
 +----------------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -468,7 +501,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------------------------+
 ; stages_done          ; 4     ; Signed Integer                                                      ;
 ; fft_size_exp         ; 0     ; Signed Integer                                                      ;
-; bits_per_sample      ; 19    ; Signed Integer                                                      ;
+; bits_per_sample      ; 11    ; Signed Integer                                                      ;
 ; output_natural_order ; false ; Enumerated                                                          ;
 +----------------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -481,79 +514,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+---------------------------------------------------------------------+
 ; stages_done          ; 4     ; Signed Integer                                                      ;
 ; fft_size_exp         ; 0     ; Signed Integer                                                      ;
-; bits_per_sample      ; 19    ; Signed Integer                                                      ;
+; bits_per_sample      ; 11    ; Signed Integer                                                      ;
 ; output_natural_order ; false ; Enumerated                                                          ;
 +----------------------+-------+---------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1                   ;
-+------------------------------------------------+------------+---------------------+
-; Parameter Name                                 ; Value      ; Type                ;
-+------------------------------------------------+------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 17         ; Untyped             ;
-; LPM_WIDTHB                                     ; 16         ; Untyped             ;
-; LPM_WIDTHP                                     ; 33         ; Untyped             ;
-; LPM_WIDTHR                                     ; 33         ; Untyped             ;
-; LPM_WIDTHS                                     ; 1          ; Untyped             ;
-; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
-; LPM_PIPELINE                                   ; 0          ; Untyped             ;
-; LATENCY                                        ; 0          ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
-; USE_EAB                                        ; OFF        ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_75t   ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
-+------------------------------------------------+------------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                   ;
-+------------------------------------------------+------------+---------------------+
-; Parameter Name                                 ; Value      ; Type                ;
-+------------------------------------------------+------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 17         ; Untyped             ;
-; LPM_WIDTHB                                     ; 16         ; Untyped             ;
-; LPM_WIDTHP                                     ; 33         ; Untyped             ;
-; LPM_WIDTHR                                     ; 33         ; Untyped             ;
-; LPM_WIDTHS                                     ; 1          ; Untyped             ;
-; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
-; LPM_PIPELINE                                   ; 0          ; Untyped             ;
-; LATENCY                                        ; 0          ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
-; USE_EAB                                        ; OFF        ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_75t   ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
-+------------------------------------------------+------------+---------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -566,10 +529,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
 ; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 17         ; Untyped             ;
+; LPM_WIDTHA                                     ; 9          ; Untyped             ;
 ; LPM_WIDTHB                                     ; 16         ; Untyped             ;
-; LPM_WIDTHP                                     ; 33         ; Untyped             ;
-; LPM_WIDTHR                                     ; 33         ; Untyped             ;
+; LPM_WIDTHP                                     ; 25         ; Untyped             ;
+; LPM_WIDTHR                                     ; 25         ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1          ; Untyped             ;
 ; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0          ; Untyped             ;
@@ -584,7 +547,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_75t   ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
@@ -601,10 +564,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
 ; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 17         ; Untyped             ;
+; LPM_WIDTHA                                     ; 9          ; Untyped             ;
 ; LPM_WIDTHB                                     ; 16         ; Untyped             ;
-; LPM_WIDTHP                                     ; 33         ; Untyped             ;
-; LPM_WIDTHR                                     ; 33         ; Untyped             ;
+; LPM_WIDTHP                                     ; 25         ; Untyped             ;
+; LPM_WIDTHR                                     ; 25         ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1          ; Untyped             ;
 ; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0          ; Untyped             ;
@@ -619,7 +582,77 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_75t   ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1                   ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 9          ; Untyped             ;
+; LPM_WIDTHB                                     ; 16         ; Untyped             ;
+; LPM_WIDTHP                                     ; 25         ; Untyped             ;
+; LPM_WIDTHR                                     ; 25         ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Untyped             ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                   ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 9          ; Untyped             ;
+; LPM_WIDTHB                                     ; 16         ; Untyped             ;
+; LPM_WIDTHP                                     ; 25         ; Untyped             ;
+; LPM_WIDTHR                                     ; 25         ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Untyped             ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
@@ -636,10 +669,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
 ; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 17         ; Untyped             ;
+; LPM_WIDTHA                                     ; 9          ; Untyped             ;
 ; LPM_WIDTHB                                     ; 16         ; Untyped             ;
-; LPM_WIDTHP                                     ; 33         ; Untyped             ;
-; LPM_WIDTHR                                     ; 33         ; Untyped             ;
+; LPM_WIDTHP                                     ; 25         ; Untyped             ;
+; LPM_WIDTHR                                     ; 25         ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1          ; Untyped             ;
 ; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0          ; Untyped             ;
@@ -654,7 +687,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_75t   ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
@@ -671,10 +704,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
 ; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 17         ; Untyped             ;
+; LPM_WIDTHA                                     ; 9          ; Untyped             ;
 ; LPM_WIDTHB                                     ; 16         ; Untyped             ;
-; LPM_WIDTHP                                     ; 33         ; Untyped             ;
-; LPM_WIDTHR                                     ; 33         ; Untyped             ;
+; LPM_WIDTHP                                     ; 25         ; Untyped             ;
+; LPM_WIDTHR                                     ; 25         ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1          ; Untyped             ;
 ; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0          ; Untyped             ;
@@ -689,7 +722,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_75t   ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
@@ -703,32 +736,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                  ; Value          ;
 +---------------------------------------+----------------+
 ; Number of entity instances            ; 6              ;
-; Entity Instance                       ; lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 17             ;
-;     -- LPM_WIDTHB                     ; 16             ;
-;     -- LPM_WIDTHP                     ; 33             ;
-;     -- LPM_REPRESENTATION             ; SIGNED         ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; YES            ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 17             ;
-;     -- LPM_WIDTHB                     ; 16             ;
-;     -- LPM_WIDTHP                     ; 33             ;
-;     -- LPM_REPRESENTATION             ; SIGNED         ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; YES            ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
 ; Entity Instance                       ; lpm_mult:Mult5 ;
-;     -- LPM_WIDTHA                     ; 17             ;
+;     -- LPM_WIDTHA                     ; 9              ;
 ;     -- LPM_WIDTHB                     ; 16             ;
-;     -- LPM_WIDTHP                     ; 33             ;
+;     -- LPM_WIDTHP                     ; 25             ;
 ;     -- LPM_REPRESENTATION             ; SIGNED         ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES            ;
@@ -737,9 +748,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
 ; Entity Instance                       ; lpm_mult:Mult4 ;
-;     -- LPM_WIDTHA                     ; 17             ;
+;     -- LPM_WIDTHA                     ; 9              ;
 ;     -- LPM_WIDTHB                     ; 16             ;
-;     -- LPM_WIDTHP                     ; 33             ;
+;     -- LPM_WIDTHP                     ; 25             ;
+;     -- LPM_REPRESENTATION             ; SIGNED         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO             ;
+;     -- INPUT_B_IS_CONSTANT            ; YES            ;
+;     -- USE_EAB                        ; OFF            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
+; Entity Instance                       ; lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 9              ;
+;     -- LPM_WIDTHB                     ; 16             ;
+;     -- LPM_WIDTHP                     ; 25             ;
+;     -- LPM_REPRESENTATION             ; SIGNED         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO             ;
+;     -- INPUT_B_IS_CONSTANT            ; YES            ;
+;     -- USE_EAB                        ; OFF            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
+; Entity Instance                       ; lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 9              ;
+;     -- LPM_WIDTHB                     ; 16             ;
+;     -- LPM_WIDTHP                     ; 25             ;
 ;     -- LPM_REPRESENTATION             ; SIGNED         ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES            ;
@@ -748,9 +781,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
 ; Entity Instance                       ; lpm_mult:Mult3 ;
-;     -- LPM_WIDTHA                     ; 17             ;
+;     -- LPM_WIDTHA                     ; 9              ;
 ;     -- LPM_WIDTHB                     ; 16             ;
-;     -- LPM_WIDTHP                     ; 33             ;
+;     -- LPM_WIDTHP                     ; 25             ;
 ;     -- LPM_REPRESENTATION             ; SIGNED         ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES            ;
@@ -759,9 +792,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
 ; Entity Instance                       ; lpm_mult:Mult2 ;
-;     -- LPM_WIDTHA                     ; 17             ;
+;     -- LPM_WIDTHA                     ; 9              ;
 ;     -- LPM_WIDTHB                     ; 16             ;
-;     -- LPM_WIDTHP                     ; 33             ;
+;     -- LPM_WIDTHP                     ; 25             ;
 ;     -- LPM_REPRESENTATION             ; SIGNED         ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES            ;
@@ -777,7 +810,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -787,7 +820,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 17 14:31:16 2020
+    Info: Processing started: Fri Jun 19 08:30:45 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file fft.vhd
@@ -807,31 +840,39 @@ Warning (10445): VHDL Subtype or Type Declaration warning at FFT.vhd(37): subtyp
 Warning (10445): VHDL Subtype or Type Declaration warning at FFT.vhd(41): subtype or type has null range
 Warning (10445): VHDL Subtype or Type Declaration warning at FFT.vhd(42): subtype or type has null range
 Info (278001): Inferred 6 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult5"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult4"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2"
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1"
-Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHA" = "17"
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult5"
+Info (12133): Instantiated megafunction "lpm_mult:Mult5" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "9"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
-    Info (12134): Parameter "LPM_WIDTHP" = "33"
-    Info (12134): Parameter "LPM_WIDTHR" = "33"
+    Info (12134): Parameter "LPM_WIDTHP" = "25"
+    Info (12134): Parameter "LPM_WIDTHR" = "25"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
     Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_75t.tdf
-    Info (12023): Found entity 1: mult_75t
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult5|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult5"
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult5|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult5"
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_v4h.tdf
+    Info (12023): Found entity 1: add_sub_v4h
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult5"
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_tfh.tdf
+    Info (12023): Found entity 1: add_sub_tfh
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult5|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult5"
 Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0"
 Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHA" = "17"
+    Info (12134): Parameter "LPM_WIDTHA" = "9"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
-    Info (12134): Parameter "LPM_WIDTHP" = "33"
-    Info (12134): Parameter "LPM_WIDTHR" = "33"
+    Info (12134): Parameter "LPM_WIDTHP" = "25"
+    Info (12134): Parameter "LPM_WIDTHR" = "25"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
     Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
@@ -839,15 +880,14 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1769 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 256 input pins
-    Info (21059): Implemented 304 output pins
-    Info (21061): Implemented 1197 logic cells
-    Info (21062): Implemented 12 DSP elements
+Info (21057): Implemented 1301 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 128 input pins
+    Info (21059): Implemented 176 output pins
+    Info (21061): Implemented 997 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4681 megabytes
-    Info: Processing ended: Wed Jun 17 14:31:20 2020
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4689 megabytes
+    Info: Processing ended: Fri Jun 19 08:30:50 2020
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

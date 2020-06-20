@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Tsinghua\2020Spring\DigitalLogicDesign\LightCube\MyCode\Music3D_FFT\simulation\qsim
+vFFT
+Z1 !s100 0>lGi]j^lF?FGC`86=?TQ1
+Z2 IhGe15Z7GBh5UY[eN<8bfN0
+Z3 V?jITFh4P:DazW6^RPI`Y82
+Z4 dD:\Tsinghua\2020Spring\DigitalLogicDesign\LightCube\MyCode\Music3D_FFT\simulation\qsim
+Z5 w1592528902
+Z6 8FFT.vo
+Z7 FFFT.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|FFT.vo|
+Z10 o-work work -O0
+Z11 n@f@f@t
+!i10b 1
+!s85 0
+Z12 !s108 1592528903.606000
+Z13 !s107 FFT.vo|
+!s101 -O0
+vFFT_vlg_check_tst
+!i10b 1
+Z14 !s100 C3ze=akbf0W1IL10@P8e_2
+Z15 Ief_5QXPT[c`B[gOoHZRME3
+Z16 VLUZg1fRTgS<D5LY]55@7?0
+R4
+Z17 w1592528901
+Z18 8FFT.vt
+Z19 FFFT.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z20 !s108 1592528903.850000
+Z21 !s107 FFT.vt|
+Z22 !s90 -work|work|FFT.vt|
+!s101 -O0
+R10
+Z23 n@f@f@t_vlg_check_tst
+vFFT_vlg_sample_tst
+!i10b 1
+Z24 !s100 T::^B<44eCIf<ePb4fEIP1
+Z25 IecZP1[GMnXIDinZ4R:U7?0
+Z26 Va7k5LeBISM<ZD6JX;=^h@1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@f@f@t_vlg_sample_tst
+vFFT_vlg_vec_tst
+!i10b 1
+!s100 iRZ_5VPgLODC6gSAoPV3M2
+IOi8lN59S]h9XTzLBmB:]=3
+Z28 VL>17oEhg[O^JDdLiTGd3j2
+R4
+R17
+R18
+R19
+Z29 L0 3311
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@f@f@t_vlg_vec_tst

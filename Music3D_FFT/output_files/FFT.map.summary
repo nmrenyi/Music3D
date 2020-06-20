@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Jun 17 14:31:20 2020
+Analysis & Synthesis Status : Successful - Fri Jun 19 08:30:50 2020
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : FFT
 Top-level Entity Name : FFT
 Family : Cyclone II
-Total logic elements : 1,197
-    Total combinational functions : 1,197
+Total logic elements : 997
+    Total combinational functions : 997
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 560
+Total pins : 304
 Total virtual pins : 0
 Total memory bits : 0
-Embedded Multiplier 9-bit elements : 12
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
