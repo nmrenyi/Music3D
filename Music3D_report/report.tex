@@ -73,6 +73,11 @@
 \end{center}
 展示视频链接如下：
 
+舒缓模式：\url{https://www.bilibili.com/video/BV1na4y1Y7t9/}
+
+动感模式：\url{https://www.bilibili.com/video/BV1rZ4y1H7Dr/}
+
+% \newpage
 \section{文件说明}
 本项目文件说明如下表：\footnote{完成者中带*对应的文件，参考了\url{https://github.com/Ugon/fpga-fft-equalizer}或直接使用Altera中的PLL，并非完全独立实现。}
 \begin{table}[h]
@@ -114,7 +119,7 @@
         \caption{整体框架图}
 \end{figure}
 
-
+\clearpage
 \subsection{FPGA设计概要}
 \paragraph{}
 FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收了AN831模块输出的时域数字串行信号，并将其转为并行，
@@ -127,7 +132,6 @@ FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收�
         \includegraphics[width=0.8\textwidth]{./pic/Design.png}
         \caption{FPGA设计概要图}
 \end{figure}
-
 
 \subsection{光立方工作示意}
 \paragraph{}
@@ -145,13 +149,25 @@ FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收�
         \caption{光立方工作原理示意图}
 \end{figure}
 
-
+\newpage
 \section{关键技术分析}
 \subsection{Fast Fourier Transformation}
 \paragraph{}为了从时域信号中提取频域信息，我们需要使用快速傅里叶变换(FFT)。在本代码中，我们配置WM8731芯片的采样频率为8KHz, 进行64点的FFT，得到了125Hz, 250Hz, 375Hz, 500Hz, 625Hz, 750Hz, 875Hz, 1000Hz
 这8个频率处的频谱分量，正好对应光立方每一帧的8列灯光信息。为了节约计算成本，我们在进行FFT时，通过定点数的方式，提前储存了旋转因子。
 
 \subsection{串口协议通信}
+\subsubsection{WM8731串口协议}
+\paragraph{}
+在本项目中，我们使用了WM8731的DSP工作模式。在该模式下，左右声道信号在BCLK和LRCLK信号的控制下，通过ADCDAT进行传输。下图为信号传输协议示意图。
+
+\begin{figure}[h]
+    \centering
+    \label{dsp}
+        \includegraphics[width=0.74\textwidth]{./pic/dsp.png}
+        \caption{DSP模式下，WM8731串口传输协议示意图}
+\end{figure}
+
+\subsubsection{光立方串口协议}
 \paragraph{}通过UART串口传送串行信号，可以将设计好的灯光信息传给光立方模块上的单片机（相当于下位机），并由单片机控制灯的亮灭。
 每一时刻的灯光信号由65个8位（并行）逻辑向量构成，需要将这些8位并行数据转化为串行的01输出，因此需要编写串口协议通信模块。该模块基于状态机
 实现，通过不同状态表示当前输出处于起始位、数据位、校验位还是停止位，并通过计数方法使之适应相应的波特率。
@@ -164,7 +180,46 @@ FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收�
 
 
 \section{程序注释}
-\section{波形仿真结果说明}
+一些重要信号的说明如下表：
+\begin{table}[h]
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        信号名& 所属实体& 数据类型& 说明\\ 
+        \hline
+        iCLK\_100& top& std\_logic& 100MHz时钟输入\\
+        \hline
+        iCLK\_11Mhz& top& std\_logic& 11.0592MHz时钟输入\\
+        \hline
+        Mode& top& std\_logic& 模式选择：舒缓模式、动感模式\\
+        \hline
+        AUD\_BCLK& top& std\_logic& 一个时钟信号，频率为$2\times SampleFrequency \times BitsPerSample$ \\
+        \hline
+        AUD\_ADCLRCK& top& std\_logic&控制左右声道输出的时钟信号 \\ 
+        \hline
+        iAUD\_ADCDAT& top& std\_logic&WM8731芯片模数转换得到的数字信号 \\ 
+        \hline
+        tx\_out& top& std\_logic& UART串口信号输出（给光立方）\\
+        \hline
+        I2C\_SDAT& top& std\_logic& I2C协议中，控制WM8731芯片寄存器的信号 \\
+        \hline
+        oI2C\_SCLK& top& std\_logic& I2C协议中的一个时钟信号 \\
+        \hline
+        out\_page& AN831& std\_logic\_vector(64)& 单帧（每一时刻）灯光信号\\
+        \hline
+        out\_page\_sample\_available& AN831& std\_logic& 用于指示out\_page是否可用\\
+        \hline
+        data\_in& mTransmitter& std\_logic\_vector(64)& 同out\_page，灯光信息输入\\
+        \hline
+        send\_cmd& mTransmitter& std\_logic& 同out\_page\_sample\_available，上升沿抓取灯光信息\\
+        \hline
+
+    \end{tabular}}
+    \caption{重要信号说明}
+\end{table}
+
+
 \section{遇到问题与解决方法}
 \subsection{FPGA逻辑资源不足}
 \paragraph{}在最初的项目调试中，我们希望做到的是采样频率48kHz的1024点FFT。这样做存在的问题是，
@@ -189,5 +244,20 @@ FPGA设计概要如Figure\eqref{Design}所示。在FPGA中，我们首先接收�
 \paragraph{}实验中还出现过AN831模块无法正常传输信号的情况，经检查发现为实验板的5V电源供电不稳定。通过重新烧录程序或者更换新的电源能够解决问题。
 
 \section{实验总结}
+\paragraph{}
+这一学期的数字逻辑设计课程对我来说是一次很难忘的体验。之前我只对于底层的电路和顶层的程序设计有所了解，而对中间的硬件模块化设计知之甚少；数设课程很好地填补了这一块的知识盲区。数设不同于其他同类型课程最重要的一点，我觉得在于设计和上板调试的训练；只有真正在硬件上实际操作时，才能感受到硬件设计与软件编程不同之处。
+
+当然我觉得能够有幸和任一这么一位靠谱的队友一起奋战数月，并且看着我们的设计成果慢慢接近预设的目标应该是最有成就感也是最值得回忆的事吧，同时也非常非常感谢老师和助教们专业且耐心的指导。要说给之后上数设同学的建议，大概是一定不要吝啬调试验证的时间，每个模块设计好之后一定要充分的调试检查，尽管有时候调试时间比设计时间还要久。不过最重要的还是keep yourself occupied and enjoy it!
+
+\rightline{————潘传宇}
+
+\paragraph{}
+数字逻辑设计课是一门很有趣的课。前半部分的理论和后半部分的实验相辅相成。非常感谢老师和助教给予我们耐心而细致的指点，也很高兴能和潘传宇同学一起组队。能够自己选择项目内容并一步步实现，是一个富有挑战但也收获了知识和乐趣的过程。在这个过程中，我锻炼了团队协作、解决问题、寻求帮助、查找资料等各方面的能力。
+
+谈到最后较为顺利地完成项目的经验的话，从我们组的角度来看，主要是在一开始选择难度适当的题目，并合理规划进度。在选题时我们经过充分调研最终选择了在光立方上做音频可视化任务，并与老师和助教沟通了可行性和难度。此外我们组整体进度把握较好，在13周末就达成了阶段性成果，15周周一基本达到了预期结果，剩余一周则进行了充分的调优和展示的准备，因此能够有条不紊地完成整个项目。 
+
+\rightline{————任一}
+
+
 
 \end{document}
