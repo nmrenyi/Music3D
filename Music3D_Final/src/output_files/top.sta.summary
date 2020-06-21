@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup '11'
+Slack : -2.215
+TNS   : -81.316
+
+Type  : Slow Model Setup '100'
+Slack : 2.531
+TNS   : 0.000
+
+Type  : Slow Model Setup 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 10.963
+TNS   : 0.000
+
+Type  : Slow Model Hold '11'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Slow Model Hold '100'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width '100'
+Slack : 3.758
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 8.758
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width '11'
+Slack : 44.212
+TNS   : 0.000
+
+Type  : Fast Model Setup '11'
+Slack : -0.746
+TNS   : -11.854
+
+Type  : Fast Model Setup '100'
+Slack : 7.312
+TNS   : 0.000
+
+Type  : Fast Model Setup 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 17.164
+TNS   : 0.000
+
+Type  : Fast Model Hold '11'
+Slack : -0.397
+TNS   : -0.560
+
+Type  : Fast Model Hold '100'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width '100'
+Slack : 4.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'AN831|c0|altpll_component|pll|clk[0]'
+Slack : 9.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width '11'
+Slack : 44.454
+TNS   : 0.000
+
+------------------------------------------------------------

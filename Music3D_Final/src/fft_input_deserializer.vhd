@@ -1,0 +1,91 @@
+-----------------------------------------------------------
+--
+-- Copyright (c) 2020, nmrenyi <ry18@mails.tsinghua.edu.cn>
+-- Referenced to https://github.com/Ugon/fpga-fft-equalizer
+-----------------------------------------------------------
+-- fft_input_deserializer.vhd
+-- create time: 2020-05-01
+-- target chip: EP2C70F672C8
+-- main signal:
+--             Input:      All input signal have been stated in upper level(audio_processor.vhd).
+--
+--             Output:     vector_left / vector_right   | left / right channel audio data ready for FFT
+--						   new_vector                   | new vector ready signal
+-- main function: Prepare number_of_samples points of data for FFT
+-----------------------------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity fft_input_deserializer is
+	generic (
+		number_of_samples:          integer := 3;
+		bits_per_sample:            integer := 2);
+	port (
+		reset_n:              in    std_logic;
+		bclk:                 in    std_logic;
+
+		sample_available_from_adc:     in    std_logic;
+		left_channel_sample_from_adc:  in    signed(bits_per_sample - 1 downto 0);
+		right_channel_sample_from_adc: in    signed(bits_per_sample - 1 downto 0);
+		
+		vector_left:          out   std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0) := (others => '0');
+		vector_right:         out   std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0) := (others => '0');
+		new_vector:           out   std_logic := '0');
+end fft_input_deserializer;
+
+architecture fft_input_deserializer_impl of fft_input_deserializer is
+
+	signal vector_left_int:   std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0) := (others => '0');
+	signal vector_right_int:  std_logic_vector(number_of_samples * bits_per_sample - 1 downto 0) := (others => '0');
+
+	signal trigger_delay:     std_logic := '0';
+
+begin
+
+	process(reset_n, sample_available_from_adc)
+		variable samples_remaining: integer := number_of_samples;
+	begin
+		if (reset_n = '0') then
+			vector_left <= (others => '0');
+			vector_right <= (others => '0');
+			vector_left_int <= (others => '0');
+			vector_right_int <= (others => '0');
+			trigger_delay <= '0';
+		elsif (rising_edge(sample_available_from_adc)) then
+			if (samples_remaining > 1) then
+				samples_remaining := samples_remaining - 1;
+				vector_left_int <= vector_left_int((number_of_samples - 1) * bits_per_sample - 1 downto 0) & std_logic_vector(left_channel_sample_from_adc);
+				vector_right_int <= vector_right_int((number_of_samples - 1) * bits_per_sample - 1 downto 0) & std_logic_vector(right_channel_sample_from_adc);						
+			else
+				samples_remaining := number_of_samples;
+				vector_left <= vector_left_int((number_of_samples - 1) * bits_per_sample - 1 downto 0) & std_logic_vector(left_channel_sample_from_adc);
+				vector_right <= vector_right_int((number_of_samples - 1) * bits_per_sample - 1 downto 0) & std_logic_vector(right_channel_sample_from_adc);
+				trigger_delay <= not trigger_delay;
+			end if;
+		end if;
+	end process;
+
+	process (reset_n, bclk, trigger_delay)
+		variable state: integer := 0;
+		variable last_trigger_delay: std_logic := trigger_delay;
+	begin
+		if(reset_n = '0') then
+			state := 0;
+			last_trigger_delay := trigger_delay;
+		elsif (rising_edge(bclk)) then
+			if (state = 0 and trigger_delay = not last_trigger_delay) then
+				last_trigger_delay := trigger_delay;
+				state := 1;
+			elsif (state = 1) then
+				new_vector <= '1';
+				state := 2;
+			else
+				new_vector <= '0';
+				state := 0;
+			end if;
+		end if;
+	end process;
+
+end fft_input_deserializer_impl;
